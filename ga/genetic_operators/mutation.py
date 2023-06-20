@@ -1,10 +1,10 @@
-
 from abc import abstractmethod
 
 from ga.individual import Individual
 from ga.genetic_operators.genetic_operator import GeneticOperator
 from ga.population import Population
 from ga.genetic_algorithm import GeneticAlgorithm
+
 
 class Mutation(GeneticOperator):
 
@@ -20,3 +20,9 @@ class Mutation(GeneticOperator):
     @abstractmethod
     def mutate(self, individual: Individual) -> None:
         pass
+
+    @staticmethod
+    def permute(individual: Individual, index1: int, index2: int) -> None:
+        aux = individual.genome[index2]
+        individual.genome[index2] = individual.genome[index1]
+        individual.genome[index1] = aux
