@@ -4,9 +4,9 @@ from experiments.experiment_listener import ExperimentListener
 from ga.genetic_operators.mutation3 import Mutation3
 from ga.genetic_operators.mutation2 import Mutation2
 from ga.selection_methods.tournament import Tournament
-from ga.genetic_operators.recombination2 import Recombination2
+from ga.genetic_operators.recombination_cx import RecombinationCX
+from ga.genetic_operators.recombination_ox1 import RecombinationOX1
 from ga.genetic_operators.recombination_pmx import RecombinationPMX
-from ga.genetic_operators.recombination3 import Recombination3
 from ga.genetic_operators.mutation_insert import MutationInsert
 from ga.genetic_algorithm import GeneticAlgorithm
 from experiments_statistics.statistic_best_in_run import StatisticBestInRun
@@ -44,10 +44,10 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         match self.get_parameter_value('Recombination'):
             case 'pmx':
                 self.recombination_method = RecombinationPMX(recombination_probability)
-            case 'recombination2':
-                self.recombination_method = Recombination2(recombination_probability)
-            case 'recombination3':
-                self.recombination_method = Recombination3(recombination_probability)
+            case 'ox1':
+                self.recombination_method = RecombinationOX1(recombination_probability)
+            case 'cx':
+                self.recombination_method = RecombinationCX(recombination_probability)
 
         # MUTATION
         mutation_probability = float(self.get_parameter_value('Mutation_probability'))
