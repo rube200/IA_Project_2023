@@ -7,8 +7,8 @@ class Individual(ABC):
     def __init__(self, problem: "Problem", num_genes: int):
         self.num_genes = num_genes
         self.problem = problem
-        self.genome = None
-        self.fitness = None
+        self.genome = [-1] * num_genes
+        self.fitness = 0
 
     @abstractmethod
     def swap_genes(self, other, index: int):

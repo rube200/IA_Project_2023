@@ -1,7 +1,7 @@
-
 from abc import abstractmethod
 from ga.problem import Problem
 from ga.individual import Individual
+
 
 class IntVectorIndividual(Individual):
 

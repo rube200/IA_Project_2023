@@ -1,12 +1,27 @@
+from ga.genetic_algorithm import GeneticAlgorithm
 from ga.individual_int_vector import IntVectorIndividual
+
 
 class WarehouseIndividual(IntVectorIndividual):
 
+    # noinspection PyUnresolvedReferences
     def __init__(self, problem: "WarehouseProblem", num_genes: int):
         super().__init__(problem, num_genes)
-        # TODO
+        for i in range(self.num_genes):
+            new_gene = GeneticAlgorithm.rand.randint(0, num_genes - 1)
+            while self._is_gene_assigned(new_gene):
+                new_gene = GeneticAlgorithm.rand.randint(0, num_genes - 1)
+            self.genome[i] = new_gene
+
+    def _is_gene_assigned(self, gene: int) -> bool:
+        for i in range(self.num_genes):
+            if self.genome[i] == gene:
+                return True
+
+        return False
 
     def compute_fitness(self) -> float:
+        self.fitness = 0
         # TODO
         return 0
 
@@ -16,7 +31,7 @@ class WarehouseIndividual(IntVectorIndividual):
 
     def __str__(self):
         string = 'Fitness: ' + f'{self.fitness}' + '\n'
-        string += str (self.genome) + "\n\n"
+        string += str(self.genome) + "\n\n"
         # TODO
         return string
 
