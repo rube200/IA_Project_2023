@@ -11,7 +11,7 @@ class WarehouseState(State[Action]):
 
     def __init__(self, matrix: ndarray, rows, columns):
         super().__init__()
-        # TODO
+        self.steps = 0
 
         self.rows = rows
         self.columns = columns
@@ -27,37 +27,62 @@ class WarehouseState(State[Action]):
                     self.line_exit = i
                     self.column_exit = j
 
+    @staticmethod
+    def is_movable_cell(target_cell) -> bool:  # todo colisoes
+        return target_cell == constants.EMPTY or constants.EXIT
+
     def can_move_up(self) -> bool:
-        # TODO
-        pass
+        if self.line_forklift <= 0:
+            return False
+
+        target_cell = self.matrix[self.line_forklift - 1][self.column_forklift]
+        return self.is_movable_cell(target_cell)
 
     def can_move_right(self) -> bool:
-        # TODO
-        pass
+        if self.column_forklift == self.columns - 1:
+            return False
+
+        target_cell = self.matrix[self.line_forklift][self.column_forklift + 1]
+        return self.is_movable_cell(target_cell)
 
     def can_move_down(self) -> bool:
-        # TODO
-        pass
+        if self.line_forklift == self.rows - 1:
+            return False
+
+        target_cell = self.matrix[self.line_forklift + 1][self.column_forklift]
+        return self.is_movable_cell(target_cell)
 
     def can_move_left(self) -> bool:
-        # TODO
-        pass
+        if self.column_forklift <= 0:
+            return False
+
+        target_cell = self.matrix[self.line_forklift][self.column_forklift - 1]
+        return self.is_movable_cell(target_cell)
+
+    def update_agent_in_matrix(self, new_line, new_column):  # todo colisoes
+        if self.line_forklift == self.line_exit and self.column_forklift == self.column_exit:
+            old_cell_state = constants.EXIT
+        else:
+            old_cell_state = constants.EMPTY
+
+        self.matrix[self.line_forklift][self.column_forklift] = old_cell_state
+        self.line_forklift = new_line
+        self.column_forklift = new_column
+        self.matrix[self.line_forklift][self.column_forklift] = constants.FORKLIFT
+
+        self.steps += 1
 
     def move_up(self) -> None:
-        # TODO
-        pass
+        self.update_agent_in_matrix(self.line_forklift - 1, self.column_forklift)
 
     def move_right(self) -> None:
-        # TODO
-        pass
+        self.update_agent_in_matrix(self.line_forklift, self.column_forklift + 1)
 
     def move_down(self) -> None:
-        # TODO
-        pass
+        self.update_agent_in_matrix(self.line_forklift + 1, self.column_forklift)
 
     def move_left(self) -> None:
-        # TODO
-        pass
+        self.update_agent_in_matrix(self.line_forklift, self.column_forklift - 1)
 
     def get_cell_color(self, row: int, column: int) -> Color:
         if row == self.line_exit and column == self.column_exit and (
