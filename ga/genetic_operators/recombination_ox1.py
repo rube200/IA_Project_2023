@@ -22,11 +22,11 @@ class RecombinationOX1(Recombination):
     @staticmethod
     def recombine_parent(ind1: Individual, ind2: Individual, cut1: int, cut2: int) -> ([], []):
         genome_size = ind1.num_genes
-        child1, child2 = [-1] * genome_size, [-1] * genome_size
+        child1_genome, child2_genome = [-1] * genome_size, [-1] * genome_size
 
         for i in range(cut1, cut2 + 1):
-            child1[i] = ind2.genome[i]
-            child2[i] = ind1.genome[i]
+            child1_genome[i] = ind2.genome[i]
+            child2_genome[i] = ind1.genome[i]
 
         index, ind1_index, ind2_index = 0, 0, 0
         while index < genome_size:
@@ -34,25 +34,25 @@ class RecombinationOX1(Recombination):
                 index = cut2 + 1
                 continue
 
-            if child1[index] == -1:
+            if child1_genome[index] == -1:
                 next_genome = ind1.genome[ind1_index]
-                while next_genome in child1:
+                while next_genome in child1_genome:
                     ind1_index += 1
                     next_genome = ind1.genome[ind1_index]
 
-                child1[index] = next_genome
+                child1_genome[index] = next_genome
 
-            if child2[index] == -1:
+            if child2_genome[index] == -1:
                 next_genome = ind2.genome[ind2_index]
-                while next_genome in child2:
+                while next_genome in child2_genome:
                     ind2_index += 1
                     next_genome = ind2.genome[ind2_index]
 
-                child2[index] = next_genome
+                child2_genome[index] = next_genome
 
             index += 1
 
-        return child1, child2
+        return child1_genome, child2_genome
 
     def __str__(self):
         return "OX1 Recombination (" + f'{self.probability}' + ")"
