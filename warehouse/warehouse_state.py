@@ -29,7 +29,7 @@ class WarehouseState(State[Action]):
 
     @staticmethod
     def is_movable_cell(target_cell) -> bool:  # todo colisoes
-        return target_cell == constants.EMPTY or constants.EXIT
+        return target_cell == constants.EMPTY or target_cell == constants.EXIT
 
     def can_move_up(self) -> bool:
         if self.line_forklift <= 0:
