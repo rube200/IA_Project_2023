@@ -10,13 +10,13 @@ import queue
 import threading
 
 import constants
-from ga.genetic_operators.mutation2 import Mutation2
 from ga.genetic_operators.mutation3 import Mutation3
 from ga.selection_methods.tournament import Tournament
 from ga.genetic_operators.recombination_cx import RecombinationCX
 from ga.genetic_operators.recombination_ox1 import RecombinationOX1
 from ga.genetic_operators.recombination_pmx import RecombinationPMX
 from ga.genetic_operators.mutation_insert import MutationInsert
+from ga.genetic_operators.mutation_rsm import MutationRSM
 from ga.genetic_algorithm_thread import GeneticAlgorithmThread
 from warehouse.warehouse_agent_search import WarehouseAgentSearch, read_state_from_txt_file
 from warehouse.warehouse_experiments_factory import WarehouseExperimentsFactory
@@ -134,7 +134,7 @@ class Window(tk.Tk):
                                                anchor="e", width=25)
         self.label_mutation_methods.grid(row=7, column=0)
 
-        mutation_methods = ['Insert', 'Mutation2', 'Mutation3']
+        mutation_methods = ['Insert', 'Rsm', 'Mutation3']
 
         self.combo_mutation_methods = ttk.Combobox(master=self.panel_parameters, state="readonly",
                                                    values=mutation_methods, width=14)
@@ -285,7 +285,7 @@ class Window(tk.Tk):
 
     def runSearch_button_clicked(self):
 
-        self.agent_search.search_method.stopped=False
+        self.agent_search.search_method.stopped = False
 
         self.text_problem.delete("1.0", "end")
 
@@ -302,7 +302,6 @@ class Window(tk.Tk):
         self.solver.start()
 
     def runGA_button_clicked(self):
-
         if self.problem_ga is None:
             messagebox.showwarning("Warning", "You should define a problem first (Problem button)")
             return
@@ -320,7 +319,7 @@ class Window(tk.Tk):
         mutation_methods_index = self.combo_recombination_methods.current()
         mutation_method = MutationInsert(
             float(self.entry_mutation_prob.get())) if mutation_methods_index == 0 else \
-            Mutation2(float(self.entry_mutation_prob.get())) if mutation_methods_index == 1 else \
+            MutationRSM(float(self.entry_mutation_prob.get())) if mutation_methods_index == 1 else \
                 Mutation3(float(self.entry_mutation_prob.get()))
 
         self.genetic_algorithm = GeneticAlgorithmThread(
@@ -369,7 +368,7 @@ class Window(tk.Tk):
             if done:
                 self.queue.queue.clear()
                 self.after_cancel(self.after_id)
-                self.after_id= None
+                self.after_id = None
                 self.solution_runner = None
                 self.manage_buttons(data_set=tk.NORMAL, runSearch=tk.DISABLED, runGA=tk.NORMAL, stop=tk.DISABLED,
                                     open_experiments=tk.NORMAL, run_experiments=tk.DISABLED,
@@ -408,7 +407,6 @@ class Window(tk.Tk):
             self.solver = None
             return
 
-
         if self.solution_runner is not None and self.solution_runner.thread_running:
             self.solution_runner.stop()
             self.queue.queue.clear()
@@ -429,9 +427,6 @@ class Window(tk.Tk):
                                 open_experiments=tk.NORMAL, run_experiments=tk.DISABLED, stop_experiments=tk.DISABLED,
                                 simulation=tk.DISABLED, stop_simulation=tk.DISABLED)
             self.genetic_algorithm = None
-
-
-
 
     def open_experiments_button_clicked(self):
         filename = fd.askopenfilename(initialdir='.')
@@ -620,7 +615,7 @@ class SearchSolver(threading.Thread):
     def run(self):
         # TODO calculate pairs distances
 
-        self.agent.search_method.stopped=True
+        self.agent.search_method.stopped = True
         self.gui.problem_ga = WarehouseProblemGA(self.agent)
         self.gui.manage_buttons(data_set=tk.NORMAL, runSearch=tk.DISABLED, runGA=tk.NORMAL, stop=tk.DISABLED,
                                 open_experiments=tk.NORMAL, run_experiments=tk.DISABLED, stop_experiments=tk.DISABLED,
@@ -666,4 +661,3 @@ class SolutionRunner(threading.Thread):
                 # TODO put the catched products in black
             self.gui.queue.put((copy.deepcopy(self.state), step, False))
         self.gui.queue.put((None, steps, True))  # Done
-
