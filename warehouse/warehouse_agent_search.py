@@ -1,3 +1,4 @@
+import copy
 from typing import TypeVar
 
 import numpy as np
@@ -8,6 +9,7 @@ from agentsearch.state import State
 from warehouse.cell import Cell
 from warehouse.heuristic_warehouse import HeuristicWarehouse
 from warehouse.pair import Pair
+from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
 
 
 class WarehouseAgentSearch(Agent):
@@ -49,6 +51,15 @@ class WarehouseAgentSearch(Agent):
         for p in self.pairs:
             string += f"{p}\n"
         return string
+
+    def calculate_pairs_distances(self):
+        for pair in self.pairs:
+            state = copy.deepcopy(self.initial_environment)
+            state.update_agent_in_matrix(pair.cell1.line, pair.cell1.column)
+
+            problem = WarehouseProblemSearch(state, pair.cell2)
+            solution = self.solve_problem(problem)
+            pair.value = solution.cost
 
 
 def read_state_from_txt_file(filename: str):
