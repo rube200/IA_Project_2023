@@ -53,9 +53,18 @@ class WarehouseAgentSearch(Agent):
         return string
 
     def calculate_pairs_distances(self):
+
         for pair in self.pairs:
             state = copy.deepcopy(self.initial_environment)
-            state.update_agent_in_matrix(pair.cell1.line, pair.cell1.column)
+            is_forklift = state.choose_forklift_by_cell(pair.cell1)
+
+            if not is_forklift:
+                pair_line = pair.cell1.line
+                pair_column = pair.cell1.column
+                if pair_column > 0 and state.is_movable_cell(state.matrix[pair_line][pair_column - 1]):
+                    state.update_forklift_in_matrix(pair.cell1.line, pair.cell1.column - 1)
+                elif pair_column < state.columns - 1 and state.is_movable_cell(state.matrix[pair_line][pair_column + 1]):
+                    state.update_forklift_in_matrix(pair.cell1.line, pair.cell1.column + 1)
 
             problem = WarehouseProblemSearch(state, pair.cell2)
             solution = self.solve_problem(problem)
