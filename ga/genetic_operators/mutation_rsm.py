@@ -22,4 +22,4 @@ class MutationRSM(Mutation):
             cut2 -= 1
 
     def __str__(self):
-        return "RSM Mutation (" + f'{self.probability}' + ")"
+        return "RSM (" + f'{self.probability}' + ")"
