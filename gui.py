@@ -10,12 +10,12 @@ import queue
 import threading
 
 import constants
-from ga.genetic_operators.mutation3 import Mutation3
 from ga.selection_methods.tournament import Tournament
 from ga.genetic_operators.recombination_cx import RecombinationCX
 from ga.genetic_operators.recombination_ox1 import RecombinationOX1
 from ga.genetic_operators.recombination_pmx import RecombinationPMX
 from ga.genetic_operators.mutation_insert import MutationInsert
+from ga.genetic_operators.mutation_psm import MutationPSM
 from ga.genetic_operators.mutation_rsm import MutationRSM
 from ga.genetic_algorithm_thread import GeneticAlgorithmThread
 from warehouse.warehouse_agent_search import WarehouseAgentSearch, read_state_from_txt_file
@@ -134,7 +134,7 @@ class Window(tk.Tk):
                                                anchor="e", width=25)
         self.label_mutation_methods.grid(row=7, column=0)
 
-        mutation_methods = ['Insert', 'Rsm', 'Mutation3']
+        mutation_methods = ['Insert', 'Rsm', 'Psm']
 
         self.combo_mutation_methods = ttk.Combobox(master=self.panel_parameters, state="readonly",
                                                    values=mutation_methods, width=14)
@@ -320,7 +320,7 @@ class Window(tk.Tk):
         mutation_method = MutationInsert(
             float(self.entry_mutation_prob.get())) if mutation_methods_index == 0 else \
             MutationRSM(float(self.entry_mutation_prob.get())) if mutation_methods_index == 1 else \
-                Mutation3(float(self.entry_mutation_prob.get()))
+                MutationPSM(float(self.entry_mutation_prob.get()))
 
         self.genetic_algorithm = GeneticAlgorithmThread(
             int(self.entry_seed.get()),
