@@ -9,7 +9,6 @@ from ga.genetic_algorithm import GeneticAlgorithm
 class Mutation(GeneticOperator):
 
     def __init__(self, probability: float):
-        print(str(self.__class__))
         super().__init__(probability)
 
     def run(self, population: Population) -> None:
