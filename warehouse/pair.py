@@ -1,5 +1,8 @@
+from warehouse.cell import Cell
+
+
 class Pair:
-    def __init__(self, cell1, cell2):
+    def __init__(self, cell1 : Cell, cell2 : Cell):
         self.cell1 = cell1
         self.cell2 = cell2
         self.value = 0

@@ -30,7 +30,6 @@ class WarehouseAgentSearch(Agent):
                 elif environment.matrix[i][j] == constants.PRODUCT:
                     self.products.append(Cell(i, j))
 
-
         for a in self.forklifts:
             for p in self.products:
                 self.pairs.append(Pair(a, p))
@@ -46,14 +45,14 @@ class WarehouseAgentSearch(Agent):
             self.pairs.append(Pair(a, self.exit))
 
     def __str__(self) -> str:
-        str = "Pairs:\n"
+        string = "Pairs:\n"
         for p in self.pairs:
-            str += f"{p}\n"
-        return str
+            string += f"{p}\n"
+        return string
+
 
 def read_state_from_txt_file(filename: str):
     with open(filename, 'r') as file:
         num_rows, num_columns = map(int, file.readline().split())
         float_puzzle = np.genfromtxt(file, delimiter=' ')
         return float_puzzle, num_rows, num_columns
-
