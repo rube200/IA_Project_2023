@@ -10,7 +10,7 @@ class WarehouseProblemGA(Problem):
         self.agent_search = agent_search
 
     def generate_individual(self) -> "WarehouseIndividual":
-        return WarehouseIndividual(self, len(self.forklifts) + len(self.agent_search.products) - 1)
+        return WarehouseIndividual(self, len(self.agent_search.products) + len(self.forklifts) - 1)
 
     def __str__(self):
         string = "# of forklifts: "
