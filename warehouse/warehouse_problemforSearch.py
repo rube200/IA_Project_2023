@@ -10,7 +10,7 @@ class WarehouseProblemSearch(Problem[WarehouseState]):
 
     def __init__(self, initial_state: WarehouseState, goal_position: Cell):
         super().__init__(initial_state)
-        self.actions = [ActionDown(), ActionUp(), ActionRight(), ActionLeft()]
+        self.actions = [ActionDown(), ActionUp(), ActionRight(), ActionLeft(), ActionNotMove()]
         self.goal_position = goal_position
 
     def get_actions(self, state: WarehouseState) -> list:
@@ -26,12 +26,10 @@ class WarehouseProblemSearch(Problem[WarehouseState]):
         return successor
 
     def is_goal(self, state: WarehouseState) -> bool:
-        line_forklift, column_forklift = state.get_current_forklift()
-
         if self.goal_position.line == state.line_exit and self.goal_position.column == state.column_exit:
-            return self.goal_position.line == line_forklift and self.goal_position.column == column_forklift
+            return self.goal_position.line == state.line_forklift and self.goal_position.column == state.column_forklift
 
-        if self.goal_position.line == line_forklift:
-            return self.goal_position.column == column_forklift + 1 or self.goal_position.column == column_forklift - 1
+        if self.goal_position.line == state.line_forklift:
+            return self.goal_position.column == state.column_forklift + 1 or self.goal_position.column == state.column_forklift - 1
 
         return False
