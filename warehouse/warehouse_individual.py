@@ -24,21 +24,24 @@ class WarehouseIndividual(IntVectorIndividual):
         agent = self.problem.agent_search
 
         forklifts = agent.forklifts
-        forklift = forklifts[0]
+        exit_cell = agent.exit
         products = agent.products
         products_size = len(products)
 
+        forklift = forklifts[0]
         for g in range(self.num_genes):
             gene = self.genome[g]
-            if gene >= products_size:
-                forklift_index = gene - products_size + 1
-                forklift = forklifts[forklift_index]
+            if gene < products_size:
+                product = products[gene]
+                self.fitness += self.problem.agent_search.get_distance(forklift, product)
+                forklift = product
                 continue
 
-            product = products[gene]
-            self.fitness += self.problem.agent_search.get_distance(forklift, product)
-            forklift = product
+            self.fitness += self.problem.agent_search.get_distance(forklift, exit_cell)
+            forklift_index = gene - products_size + 1
+            forklift = forklifts[forklift_index]
 
+        self.fitness += self.problem.agent_search.get_distance(forklift, exit_cell)
         return self.fitness
 
     def obtain_all_path(self):
@@ -46,8 +49,11 @@ class WarehouseIndividual(IntVectorIndividual):
         pass
 
     def __str__(self):
-        string = 'Fitness: ' + f'{self.fitness}' + '\n'
-        string += str(self.genome) + "\n\n"
+        string = f'Fitness: {self.fitness}\n'
+        products_size = len(self.problem.agent_search.products)
+        genome_to_display = [x + 1 if x < products_size else chr(x - products_size + 66) for x in self.genome]
+        genome_to_display.insert(0, "A")
+        string += f'{genome_to_display}\n\n'
         # TODO
         return string
 
