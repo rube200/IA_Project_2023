@@ -3,7 +3,6 @@ from ga.individual_int_vector import IntVectorIndividual
 
 
 class WarehouseIndividual(IntVectorIndividual):
-
     # noinspection PyUnresolvedReferences
     def __init__(self, problem: "WarehouseProblem", num_genes: int):
         super().__init__(problem, num_genes)
@@ -22,8 +21,25 @@ class WarehouseIndividual(IntVectorIndividual):
 
     def compute_fitness(self) -> float:
         self.fitness = 0
-        # TODO
-        return 0
+        agent = self.problem.agent_search
+
+        forklifts = agent.forklifts
+        forklift = forklifts[0]
+        products = agent.products
+        products_size = len(products)
+
+        for g in range(self.num_genes):
+            gene = self.genome[g]
+            if gene >= products_size:
+                forklift_index = gene - products_size + 1
+                forklift = forklifts[forklift_index]
+                continue
+
+            product = products[gene]
+            self.fitness += self.problem.agent_search.get_distance(forklift, product)
+            forklift = product
+
+        return self.fitness
 
     def obtain_all_path(self):
         # TODO
