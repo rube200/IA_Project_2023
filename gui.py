@@ -385,7 +385,7 @@ class Window(tk.Tk):
     def draw_state(self, state):
         rows = state.rows
         columns = state.columns
-        i = 0
+        i, j = 0, ord('A')
 
         for row in range(rows):
             for col in range(columns):
@@ -395,9 +395,13 @@ class Window(tk.Tk):
                 y2 = y1 + 16
                 self.canvas.create_rectangle(x1, y1, x2, y2, fill=state.get_cell_color(row, col))
 
-                if state.matrix[row][col] == constants.PRODUCT or state.matrix[row][col] == constants.PRODUCT_CATCH:
+                cell_to_edit = state.matrix[row][col]
+                if cell_to_edit == constants.PRODUCT or cell_to_edit == constants.PRODUCT_CATCH:
                     i += 1
                     self.canvas.create_text(x1 + 8, y1 + 8, text=str(i), font=("Arial", 9))
+                elif cell_to_edit == constants.FORKLIFT:
+                    self.canvas.create_text(x1 + 8, y1 + 8, text=chr(j), font=("Arial", 9))
+                    j += 1
 
     def stop_button_clicked(self):
         if self.solver is not None and not self.solver.agent.search_method.stopped:
