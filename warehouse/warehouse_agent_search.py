@@ -53,22 +53,36 @@ class WarehouseAgentSearch(Agent):
         return string
 
     def calculate_pairs_distances(self):
-
         for pair in self.pairs:
             state = copy.deepcopy(self.initial_environment)
-            is_forklift = state.choose_forklift_by_cell(pair.cell1)
 
-            if not is_forklift:
-                pair_line = pair.cell1.line
-                pair_column = pair.cell1.column
-                if pair_column > 0 and state.is_movable_cell(state.matrix[pair_line][pair_column - 1]):
-                    state.update_forklift_in_matrix(pair.cell1.line, pair.cell1.column - 1)
-                elif pair_column < state.columns - 1 and state.is_movable_cell(state.matrix[pair_line][pair_column + 1]):
-                    state.update_forklift_in_matrix(pair.cell1.line, pair.cell1.column + 1)
+            pair_line = pair.cell1.line
+            pair_column = pair.cell1.column
+
+            cell_data = state.matrix[pair_line][pair_column]
+            if state.is_movable_cell(cell_data) or cell_data == constants.FORKLIFT:
+                state.line_forklift = pair_line
+                state.column_forklift = pair_column
+
+            elif pair_column > 0 and state.is_movable_cell(state.matrix[pair_line][pair_column - 1]):
+                state.update_forklift_in_matrix(pair.cell1.line, pair.cell1.column - 1)
+            elif pair_column < state.columns - 1 and state.is_movable_cell(state.matrix[pair_line][pair_column + 1]):
+                state.update_forklift_in_matrix(pair.cell1.line, pair.cell1.column + 1)
+
+            else:
+                state.line_forklift = pair_line
+                state.column_forklift = pair_column
 
             problem = WarehouseProblemSearch(state, pair.cell2)
             solution = self.solve_problem(problem)
             pair.value = solution.cost
+
+    def get_distance(self, cell1: Cell, cell2: Cell) -> int:
+        for pair in self.pairs:
+            if pair.cell1 == cell1 and pair.cell2 == cell2:
+                return pair.value
+
+        return self.initial_environment.rows + self.initial_environment.columns + 1
 
 
 def read_state_from_txt_file(filename: str):
