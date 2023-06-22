@@ -6,12 +6,11 @@ from warehouse.warehouse_individual import WarehouseIndividual
 class WarehouseProblemGA(Problem):
     def __init__(self, agent_search: WarehouseAgentSearch):
         self.forklifts = agent_search.forklifts
-        self.pairs = agent_search.pairs
         self.products = agent_search.products
         self.agent_search = agent_search
 
     def generate_individual(self) -> "WarehouseIndividual":
-        return WarehouseIndividual(self, len(self.agent_search.products))
+        return WarehouseIndividual(self, len(self.forklifts) + len(self.agent_search.products) - 1)
 
     def __str__(self):
         string = "# of forklifts: "
