@@ -12,9 +12,9 @@ class MutationPSM(Mutation):
             if GeneticAlgorithm.rand.random() >= self.probability:
                 continue
 
-            random_index = GeneticAlgorithm.rand.randint(0, ind.num_genes)
+            random_index = GeneticAlgorithm.rand.randint(0, ind.num_genes - 1)
             while random_index == i:
-                random_index = GeneticAlgorithm.rand.randint(0, ind.num_genes)
+                random_index = GeneticAlgorithm.rand.randint(0, ind.num_genes - 1)
 
             self.permute(ind, i, random_index)
 
