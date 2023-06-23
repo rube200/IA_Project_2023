@@ -55,7 +55,7 @@ class WarehouseIndividual(IntVectorIndividual):
         forklift_index = 0
         forklift = forklifts[forklift_index]
 
-        forklift_path = [[]]
+        forklift_path = [[forklift]]
 
         products = self.agent.products
         products_size = len(products)
@@ -79,7 +79,7 @@ class WarehouseIndividual(IntVectorIndividual):
             forklift = forklifts[forklift_index]
             state.line_forklift = forklift.line
             state.column_forklift = forklift.column
-            forklift_path.append([])
+            forklift_path.append([forklift])
 
         self.simulate_actions(forklift, self.agent.exit, state, forklift_path)
         return forklift_path, self.total_steps
