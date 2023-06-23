@@ -13,6 +13,7 @@ class WarehouseState(State[Action]):
     def __init__(self, matrix: ndarray, rows, columns):
         super().__init__()
 
+        self.is_default = True
         self.rows = rows
         self.columns = columns
         self.matrix = np.full([self.rows, self.columns], fill_value=0, dtype=int)
@@ -64,6 +65,7 @@ class WarehouseState(State[Action]):
         return self.is_movable_cell(target_cell)
 
     def update_forklift_in_matrix(self, new_line: int, new_column: int):
+        self.is_default = False
         if self.line_forklift != self.line_exit or self.column_forklift != self.column_exit:
             old_cell_state = constants.EMPTY
         else:

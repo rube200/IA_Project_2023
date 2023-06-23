@@ -385,7 +385,7 @@ class Window(tk.Tk):
     def draw_state(self, state):
         rows = state.rows
         columns = state.columns
-        i = 0
+        i, j = 0, ord('A')
 
         for row in range(rows + 1):
             for col in range(columns + 1):
@@ -410,6 +410,9 @@ class Window(tk.Tk):
                 if cell_to_edit == constants.PRODUCT or cell_to_edit == constants.PRODUCT_CATCH:
                     i += 1
                     self.canvas.create_text(x1 + 8, y1 + 8, text=str(i), font=("Arial", 9))
+                elif state.is_default and cell_to_edit == constants.FORKLIFT:
+                    self.canvas.create_text(x1 + 8, y1 + 8, text=chr(j), font=("Arial", 9))
+                    j += 1
 
     def stop_button_clicked(self):
         if self.solver is not None and not self.solver.agent.search_method.stopped:
@@ -665,6 +668,7 @@ class SolutionRunner(threading.Thread):
                     firs_cell = forklift_path[j][0]
                     old_cell[j] = firs_cell
                 if step < len(forklift_path[j]) - 1:
+                    self.state.is_default = False
                     if old_cell[j] not in new_cells:
                         self.state.matrix[old_cell[j].line][old_cell[j].column] = constants.EMPTY
                     new_cell = forklift_path[j][step + 1]
