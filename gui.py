@@ -659,7 +659,7 @@ class SolutionRunner(threading.Thread):
         forklift_path, steps = self.best_in_run.obtain_all_path()
         old_cell = [None] * len(forklift_path)
         new_cells = []
-        for step in range(steps - 1):
+        for step in range(steps):
             new_cells.clear()
             if not self.thread_running:
                 return
@@ -668,11 +668,12 @@ class SolutionRunner(threading.Thread):
                 if old_cell[j] is None:
                     firs_cell = forklift_path[j][0]
                     old_cell[j] = firs_cell
-                if step < len(forklift_path[j]) - 1:
+
+                if step < len(forklift_path[j]):
                     self.state.is_default = False
                     if old_cell[j] not in new_cells:
                         self.state.matrix[old_cell[j].line][old_cell[j].column] = constants.EMPTY
-                    new_cell = forklift_path[j][step + 1]
+                    new_cell = forklift_path[j][step]
                     new_cells.append(new_cell)
                     self.state.matrix[new_cell.line][new_cell.column] = constants.FORKLIFT
                     old_cell[j] = new_cell
@@ -681,11 +682,8 @@ class SolutionRunner(threading.Thread):
                         self.state.matrix[new_cell.line][new_cell.column - 1] = constants.PRODUCT_CATCH
                     elif new_cell.column < self.state.columns - 1 and self.state.matrix[new_cell.line][new_cell.column + 1] == constants.PRODUCT:
                         self.state.matrix[new_cell.line][new_cell.column + 1] = constants.PRODUCT_CATCH
-
-                    if new_cell.line > 0:
-                        self.state.matrix[new_cell.line][new_cell.column] = constants.PRODUCT
                 else:
                     self.state.matrix[old_cell[j].line][old_cell[j].column] = constants.FORKLIFT
 
-            self.gui.queue.put((copy.deepcopy(self.state), step, False))
+            self.gui.queue.put((copy.deepcopy(self.state), step - 1, False))
         self.gui.queue.put((None, steps, True))  # Done
