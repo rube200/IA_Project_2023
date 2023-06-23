@@ -10,6 +10,7 @@ from warehouse.cell import Cell
 from warehouse.heuristic_warehouse import HeuristicWarehouse
 from warehouse.pair import Pair
 from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
+from warehouse.warehouse_state import WarehouseState
 
 
 class WarehouseAgentSearch(Agent):
@@ -54,8 +55,7 @@ class WarehouseAgentSearch(Agent):
 
     def calculate_pairs_distances(self):
         for pair in self.pairs:
-            state = copy.deepcopy(self.initial_environment)
-
+            state = WarehouseState(self.initial_environment.matrix, self.initial_environment.rows, self.initial_environment.columns)
             pair_line = pair.cell1.line
             pair_column = pair.cell1.column
 
