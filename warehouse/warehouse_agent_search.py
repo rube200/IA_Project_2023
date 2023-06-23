@@ -76,9 +76,11 @@ class WarehouseAgentSearch(Agent):
 
     def get_pair(self, cell1: Cell, cell2: Cell) -> Pair | None:
         for pair in self.pairs:
-            if pair.cell1 == cell1 and pair.cell2 == cell2:
+            if pair.cell1.line == cell1.line and pair.cell1.column == cell1.column \
+                    and pair.cell2.line == cell2.line and pair.cell2.column == cell2.column:
                 return pair
-            elif pair.cell1 == cell2 and pair.cell2 == cell1:
+            elif pair.cell1.line == cell2.line and pair.cell1.column == cell2.column \
+                    and pair.cell2.line == cell1.line and pair.cell2.column == cell1.column:
                 return ~pair
 
         return None
