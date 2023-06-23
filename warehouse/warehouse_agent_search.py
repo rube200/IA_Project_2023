@@ -74,10 +74,19 @@ class WarehouseAgentSearch(Agent):
             pair.actions = solution.actions
             pair.value = solution.cost
 
-    def get_distance(self, cell1: Cell, cell2: Cell) -> int:
+    def get_pair(self, cell1: Cell, cell2: Cell) -> Pair | None:
         for pair in self.pairs:
-            if pair.cell1 == cell1 and pair.cell2 == cell2 or pair.cell1 == cell2 and pair.cell2 == cell1:
-                return pair.value
+            if pair.cell1 == cell1 and pair.cell2 == cell2:
+                return pair
+            elif pair.cell1 == cell2 and pair.cell2 == cell1:
+                return ~pair
+
+        return None
+
+    def get_distance(self, cell1: Cell, cell2: Cell) -> int:
+        pair = self.get_pair(cell1, cell2)
+        if pair:
+            return pair.value
 
         return self.initial_environment.rows + self.initial_environment.columns + 1
 
