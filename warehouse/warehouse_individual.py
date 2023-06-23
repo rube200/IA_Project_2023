@@ -49,11 +49,19 @@ class WarehouseIndividual(IntVectorIndividual):
         pass
 
     def __str__(self):
-        string = f'Fitness: {self.fitness}\n'
+        string = f'Fitness: {self.fitness}\nA->'
+
         products_size = len(self.problem.agent_search.products)
-        genome_to_display = [x + 1 if x < products_size else chr(x - products_size + 66) for x in self.genome]
-        genome_to_display.insert(0, "A")
-        string += f'{genome_to_display}\n\n'
+        for g in range(self.num_genes):
+            gene = self.genome[g]
+            if gene < products_size:
+                string += f'{gene + 1}'
+                if g + 1 < self.num_genes and self.genome[g + 1] < products_size:
+                    string += ','
+            else:
+                string += f'\n{chr(gene - products_size + 66)}->'
+
+        string += '\n\n'
         # TODO
         return string
 

@@ -280,7 +280,7 @@ class Window(tk.Tk):
             rows = self.initial_state.rows
             columns = self.initial_state.columns
             self.canvas.destroy()
-            self.canvas = tk.Canvas(self.panel_sim, bg="white", height=16 * (rows + 2), width=16 * (columns + 2))
+            self.canvas = tk.Canvas(self.panel_sim, bg="white", height=16 * (rows + 3), width=16 * (columns + 3))
             self.canvas.pack()
             self.draw_state(self.initial_state)
 
@@ -387,15 +387,26 @@ class Window(tk.Tk):
         columns = state.columns
         i, j = 0, ord('A')
 
-        for row in range(rows):
-            for col in range(columns):
+        for row in range(rows + 1):
+            for col in range(columns + 1):
+                if row == 0 and col == 0:
+                    continue
+
                 x1 = (col + 1) * 16
                 y1 = (row + 1) * 16
+
+                if row == 0:
+                    self.canvas.create_text(x1 + 8, y1 + 8, text=str(col - 1), font=("Arial", 9))
+                    continue
+                elif col == 0:
+                    self.canvas.create_text(x1 + 8, y1 + 8, text=str(row - 1), font=("Arial", 9))
+                    continue
+
                 x2 = x1 + 16
                 y2 = y1 + 16
-                self.canvas.create_rectangle(x1, y1, x2, y2, fill=state.get_cell_color(row, col))
+                self.canvas.create_rectangle(x1, y1, x2, y2, fill=state.get_cell_color(row - 1, col - 1))
 
-                cell_to_edit = state.matrix[row][col]
+                cell_to_edit = state.matrix[row - 1][col - 1]
                 if cell_to_edit == constants.PRODUCT or cell_to_edit == constants.PRODUCT_CATCH:
                     i += 1
                     self.canvas.create_text(x1 + 8, y1 + 8, text=str(i), font=("Arial", 9))
