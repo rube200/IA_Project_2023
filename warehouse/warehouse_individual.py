@@ -11,7 +11,7 @@ class WarehouseIndividual(IntVectorIndividual):
     def __init__(self, problem: "WarehouseProblem", num_genes: int):
         super().__init__(problem, num_genes)
         self.agent = self.problem.agent_search
-        self.total_steps = 0
+        self.steps = 0
 
         for i in range(self.num_genes):
             new_gene = GeneticAlgorithm.rand.randint(0, num_genes - 1)
@@ -55,7 +55,7 @@ class WarehouseIndividual(IntVectorIndividual):
         forklift_index = 0
         forklift = forklifts[forklift_index]
 
-        forklift_path = [[forklift]]
+        forklift_path = [[]]
 
         products = self.agent.products
         products_size = len(products)
@@ -63,34 +63,43 @@ class WarehouseIndividual(IntVectorIndividual):
         state = copy.deepcopy(self.agent.initial_environment)
         state.line_forklift = forklift.line
         state.column_forklift = forklift.column
-        self.total_steps = 0
 
+        temp_steps = 0
         for g in range(self.num_genes):
             gene = self.genome[g]
             if gene < products_size:
                 product = products[gene]
-                self.simulate_actions(forklift, product, state, forklift_path)
+                temp_steps += self.simulate_actions(forklift, product, state, forklift_path)
                 forklift = product
                 continue
 
-            self.simulate_actions(forklift, self.agent.exit, state, forklift_path)
+            temp_steps += self.simulate_actions(forklift, self.agent.exit, state, forklift_path)
 
             forklift_index = gene - products_size + 1
             forklift = forklifts[forklift_index]
             state.line_forklift = forklift.line
             state.column_forklift = forklift.column
-            forklift_path.append([forklift])
+            forklift_path.append([])
 
-        self.simulate_actions(forklift, self.agent.exit, state, forklift_path)
-        return forklift_path, self.total_steps
+            if temp_steps > self.steps:
+                self.steps = temp_steps
+            temp_steps = 0
 
-    def simulate_actions(self, cell1: Cell, cell2: Cell, state: WarehouseState, forklift_path):
+        temp_steps += self.simulate_actions(forklift, self.agent.exit, state, forklift_path)
+        if temp_steps > self.steps:
+            self.steps = temp_steps
+
+        return forklift_path, self.steps
+
+    def simulate_actions(self, cell1: Cell, cell2: Cell, state: WarehouseState, forklift_path) -> int:
+        temp_steps = 0
         pair = self.agent.get_pair(cell1, cell2)
         for action in pair.actions:
             action.execute(state)
             new_cell = Cell(state.line_forklift, state.column_forklift)
             forklift_path[len(forklift_path) - 1].append(new_cell)
-            self.total_steps += 1
+            temp_steps += 1
+        return temp_steps
 
     def __str__(self):
         string = f'Fitness: {self.fitness}\nA->'
@@ -116,5 +125,5 @@ class WarehouseIndividual(IntVectorIndividual):
         new_instance = self.__class__(self.problem, self.num_genes)
         new_instance.genome = self.genome.copy()
         new_instance.fitness = self.fitness
-        new_instance.total_steps = self.total_steps
+        new_instance.steps = self.steps
         return new_instance
