@@ -1,27 +1,31 @@
+import cProfile
 import copy
+import io
+import pstats
+import queue
+import threading
+import time
 import tkinter as tk
-from tkinter import ttk
 from tkinter import filedialog as fd
 from tkinter import messagebox
+from tkinter import ttk
+
 import matplotlib
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
-import queue
-import threading
 
 import constants
-from ga.selection_methods.tournament import Tournament
-from ga.genetic_operators.recombination_cx import RecombinationCX
-from ga.genetic_operators.recombination_ox1 import RecombinationOX1
-from ga.genetic_operators.recombination_pmx import RecombinationPMX
+from ga.genetic_algorithm_thread import GeneticAlgorithmThread
 from ga.genetic_operators.mutation_insert import MutationInsert
 from ga.genetic_operators.mutation_psm import MutationPSM
 from ga.genetic_operators.mutation_rsm import MutationRSM
-from ga.genetic_algorithm_thread import GeneticAlgorithmThread
+from ga.genetic_operators.recombination_cx import RecombinationCX
+from ga.genetic_operators.recombination_ox1 import RecombinationOX1
+from ga.genetic_operators.recombination_pmx import RecombinationPMX
+from ga.selection_methods.tournament import Tournament
 from warehouse.warehouse_agent_search import WarehouseAgentSearch, read_state_from_txt_file
 from warehouse.warehouse_experiments_factory import WarehouseExperimentsFactory
 from warehouse.warehouse_problemforGA import WarehouseProblemGA
-from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
 from warehouse.warehouse_state import WarehouseState
 
 matplotlib.use("TkAgg")
@@ -350,7 +354,6 @@ class Window(tk.Tk):
         self.entry_status.delete(0, tk.END)
 
     def sim_button_clicked(self):
-
         self.manage_buttons(data_set=tk.DISABLED, runSearch=tk.DISABLED, runGA=tk.DISABLED, stop=tk.DISABLED,
                             open_experiments=tk.DISABLED, run_experiments=tk.DISABLED, stop_experiments=tk.DISABLED,
                             simulation=tk.DISABLED, stop_simulation=tk.NORMAL)
@@ -387,6 +390,7 @@ class Window(tk.Tk):
         columns = state.columns
         i, j = 0, ord('A')
 
+        self.canvas.delete(tk.ALL)
         for row in range(rows + 1):
             for col in range(columns + 1):
                 if row == 0 and col == 0:
@@ -678,10 +682,12 @@ class SolutionRunner(threading.Thread):
                     self.state.matrix[new_cell.line][new_cell.column] = constants.FORKLIFT
                     old_cell[j] = new_cell
 
-                    if new_cell.column > 0 and self.state.matrix[new_cell.line][new_cell.column - 1] == constants.PRODUCT:
+                    if new_cell.column > 0 and self.state.matrix[new_cell.line][
+                        new_cell.column - 1] == constants.PRODUCT:
                         self.state.matrix[new_cell.line][new_cell.column - 1] = constants.PRODUCT_CATCH
 
-                    if new_cell.column < self.state.columns - 1 and self.state.matrix[new_cell.line][new_cell.column + 1] == constants.PRODUCT:
+                    if new_cell.column < self.state.columns - 1 and self.state.matrix[new_cell.line][
+                        new_cell.column + 1] == constants.PRODUCT:
                         self.state.matrix[new_cell.line][new_cell.column + 1] = constants.PRODUCT_CATCH
                 else:
                     self.state.matrix[old_cell[j].line][old_cell[j].column] = constants.FORKLIFT
