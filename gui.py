@@ -680,7 +680,8 @@ class SolutionRunner(threading.Thread):
 
                     if new_cell.column > 0 and self.state.matrix[new_cell.line][new_cell.column - 1] == constants.PRODUCT:
                         self.state.matrix[new_cell.line][new_cell.column - 1] = constants.PRODUCT_CATCH
-                    elif new_cell.column < self.state.columns - 1 and self.state.matrix[new_cell.line][new_cell.column + 1] == constants.PRODUCT:
+
+                    if new_cell.column < self.state.columns - 1 and self.state.matrix[new_cell.line][new_cell.column + 1] == constants.PRODUCT:
                         self.state.matrix[new_cell.line][new_cell.column + 1] = constants.PRODUCT_CATCH
                 else:
                     self.state.matrix[old_cell[j].line][old_cell[j].column] = constants.FORKLIFT
