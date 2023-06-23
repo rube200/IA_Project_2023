@@ -663,6 +663,7 @@ class SolutionRunner(threading.Thread):
             new_cells.clear()
             if not self.thread_running:
                 return
+
             for j in range(len(forklift_path)):
                 if old_cell[j] is None:
                     firs_cell = forklift_path[j][0]
@@ -675,9 +676,16 @@ class SolutionRunner(threading.Thread):
                     new_cells.append(new_cell)
                     self.state.matrix[new_cell.line][new_cell.column] = constants.FORKLIFT
                     old_cell[j] = new_cell
+
+                    if new_cell.column > 0 and self.state.matrix[new_cell.line][new_cell.column - 1] == constants.PRODUCT:
+                        self.state.matrix[new_cell.line][new_cell.column - 1] = constants.PRODUCT_CATCH
+                    elif new_cell.column < self.state.columns - 1 and self.state.matrix[new_cell.line][new_cell.column + 1] == constants.PRODUCT:
+                        self.state.matrix[new_cell.line][new_cell.column + 1] = constants.PRODUCT_CATCH
+
+                    if new_cell.line > 0:
+                        self.state.matrix[new_cell.line][new_cell.column] = constants.PRODUCT
                 else:
                     self.state.matrix[old_cell[j].line][old_cell[j].column] = constants.FORKLIFT
 
-                # TODO put the catched products in black
             self.gui.queue.put((copy.deepcopy(self.state), step, False))
         self.gui.queue.put((None, steps, True))  # Done
