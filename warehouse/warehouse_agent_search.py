@@ -71,6 +71,7 @@ class WarehouseAgentSearch(Agent):
 
             problem = WarehouseProblemSearch(state, pair.cell2)
             solution = self.solve_problem(problem)
+            pair.actions = solution.actions
             pair.value = solution.cost
 
     def get_distance(self, cell1: Cell, cell2: Cell) -> int:
