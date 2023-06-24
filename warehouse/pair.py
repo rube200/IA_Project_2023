@@ -38,8 +38,6 @@ class Pair:
                 new_pair.actions.append(ActionRight())
             elif type(action) == ActionRight:
                 new_pair.actions.append(ActionLeft())
-            else:
-                new_pair.actions.append(ActionNotMove)
 
         new_pair.value = self.value
         return new_pair

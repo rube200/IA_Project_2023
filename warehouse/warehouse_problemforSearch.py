@@ -10,7 +10,7 @@ class WarehouseProblemSearch(Problem[WarehouseState]):
 
     def __init__(self, initial_state: WarehouseState, goal_position: Cell):
         super().__init__(initial_state)
-        self.actions = [ActionDown(), ActionUp(), ActionRight(), ActionLeft(), ActionNotMove()]
+        self.actions = [ActionDown(), ActionUp(), ActionRight(), ActionLeft()]
         self.goal_position = goal_position
 
     def get_actions(self, state: WarehouseState) -> list:

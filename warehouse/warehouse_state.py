@@ -33,10 +33,6 @@ class WarehouseState(State[Action]):
         cell = self.matrix[line][column]
         return cell == constants.EMPTY or cell == constants.EXIT or self.allow_collisions and cell == constants.FORKLIFT
 
-    @staticmethod
-    def can_not_move() -> bool:
-        return True
-
     def can_move_up(self) -> bool:
         if self.line_forklift <= 0:
             return False
@@ -77,9 +73,6 @@ class WarehouseState(State[Action]):
         self.column_forklift = new_column
         if self.line_forklift != self.line_exit or self.column_forklift != self.column_exit:
             self.matrix[new_line][new_column] = constants.FORKLIFT
-
-    def not_move(self) -> None:
-        pass
 
     def move_up(self) -> None:
         self.update_forklift_in_matrix(self.line_forklift - 1, self.column_forklift)
