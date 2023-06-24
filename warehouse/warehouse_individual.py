@@ -145,13 +145,9 @@ class WarehouseIndividual(IntVectorIndividual):
             state.column_forklift = forklift_data.current_position.column
 
             for product in forklift_data.products:
-                steps = self.move_forklift_without_collision(forklift_data, product, state)
-                max_steps += steps
-                self.fitness += steps
+                max_steps += self.move_forklift_without_collision(forklift_data, product, state)
 
-            steps = self.move_forklift_without_collision(forklift_data, self.agent.exit, state)
-            max_steps += steps
-            self.fitness += steps
+            max_steps += self.move_forklift_without_collision(forklift_data, self.agent.exit, state)
 
             if self.steps < max_steps:
                 self.steps = max_steps
