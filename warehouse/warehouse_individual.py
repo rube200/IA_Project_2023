@@ -159,10 +159,12 @@ class WarehouseIndividual(IntVectorIndividual):
     def move_forklift_without_collision(self, forklift_data, cell2: Cell, state: WarehouseState) -> int:
         temp_steps = 0
         pair = self.agent.get_pair(Cell(state.line_forklift, state.column_forklift), cell2)
-        print(state)
+
+        state.line_forklift = forklift_data.current_position.line
+        state.column_forklift = forklift_data.current_position.column
+
         for action in pair.actions:
             action.execute(state)
-            print(state)
             forklift_data.append_cell(Cell(state.line_forklift, state.column_forklift))
             temp_steps += 1
 
