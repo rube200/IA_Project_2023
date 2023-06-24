@@ -149,12 +149,14 @@ class Window(tk.Tk):
         self.entry_mutation_prob.insert(tk.END, '0.1')
         self.entry_mutation_prob.grid(row=8, column=1)
 
-        self.parallel_run = tk.BooleanVar(value=True)
-        self.parallel_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Parallel', variable=self.parallel_run, command=self.parallel_button_clicked)
+        self.parallel_run = tk.BooleanVar(value=False)
+        self.parallel_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Parallel',
+                                                variable=self.parallel_run, command=self.parallel_button_clicked)
         self.parallel_checkbox.grid(row=9, column=0)
 
         self.collisions_run = tk.BooleanVar(value=False)
-        self.collisions_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Collisions', variable=self.collisions_run, command=self.collisions_button_clicked)
+        self.collisions_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Collisions',
+                                                  variable=self.collisions_run, command=self.collisions_button_clicked)
         self.collisions_checkbox.grid(row=9, column=1)
 
         # 1.1.2 Run Panel
@@ -273,12 +275,14 @@ class Window(tk.Tk):
         # End of constructor -----------------------------------
 
     def parallel_button_clicked(self):
-        if not self.parallel_run.get():
-            self.collisions_checkbox.deselect()
+        # if not self.parallel_run.get():
+        #    self.collisions_checkbox.deselect()
+        pass
 
     def collisions_button_clicked(self):
-        if self.collisions_run.get():
-            self.parallel_checkbox.select()
+        # if self.collisions_run.get():
+        #    self.parallel_checkbox.select()
+        pass
 
     def problem_button_clicked(self):
         filename = fd.askopenfilename(initialdir='.')
@@ -526,7 +530,7 @@ class Window(tk.Tk):
             self.generations += 1
             self.update_plot()
         self.update_idletasks()
-        self.after_id = self.after(0, self.generation_ended)
+        self.after_id = self.after(5, self.generation_ended)
 
     def draw_empty_plot(self):
         fig = Figure(figsize=(5, 2.5), dpi=100)

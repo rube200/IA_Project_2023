@@ -1,5 +1,5 @@
-
 import copy
+import time
 from random import Random
 
 from ga.ga_event import GAEvent
@@ -8,7 +8,6 @@ from ga.selection_methods.selection_method import SelectionMethod
 
 
 class GeneticAlgorithm:
-
     rand = None
 
     def __init__(self,
@@ -39,6 +38,8 @@ class GeneticAlgorithm:
     def run(self) -> None:
         if self.problem is None:
             return None
+
+        start_time = time.perf_counter_ns()
         self.generation = 0
         self.population = Population(self.population_size, self.problem)
         self.population.evaluate(self.parallel_run)
@@ -55,6 +56,7 @@ class GeneticAlgorithm:
             self.generation += 1
             self.fire_generation_ended()
         self.fire_run_ended()
+        print("Performance: ", time.perf_counter_ns() - start_time)
 
     def __str__(self):
         return "GA: \n" + str(self.population)

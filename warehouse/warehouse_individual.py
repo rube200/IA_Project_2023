@@ -31,22 +31,24 @@ class WarehouseIndividual(IntVectorIndividual):
 
     def compute_fitness(self) -> float:
         self.fitness = 0
+        self.steps = 0
 
         forklift_index = 0
         forklifts = self.agent.forklifts
-        forklifts_data = [DynamicForklift(forklifts[forklift_index])]
+        forklifts_data = []
+        for i in range(len(forklifts)):
+            forklifts_data.append(DynamicForklift(forklifts[i]))
 
         products = self.agent.products
         products_size = len(products)
 
         for g in range(self.num_genes):
             gene = self.genome[g]
-            if gene >= products_size:
-                forklift_index = gene - products_size + 1
-                forklifts_data.append(DynamicForklift(forklifts[forklift_index]))
-            else:
+            if gene < products_size:
                 product = products[gene]
                 forklifts_data[forklift_index].append_product(product)
+            else:
+                forklift_index = gene - products_size + 1
 
         if not self.agent.initial_environment.allow_collisions:
             self.compute_fitness_by_simulation(forklifts_data)
@@ -57,8 +59,6 @@ class WarehouseIndividual(IntVectorIndividual):
         for forklift_data in forklifts_data:
             self.fitness += forklift_data.steps
             self.best_forklift_path.append(forklift_data.path)
-            if forklift_data.steps > self.steps:
-                self.steps = forklift_data.steps
 
         return self.fitness
 
@@ -114,9 +114,8 @@ class WarehouseIndividual(IntVectorIndividual):
             problem = WarehouseProblemSearch(state, target_cell)
             solution = self.agent.solve_problem(problem)
 
-            actions = solution.actions
-            if actions:
-                next_action = actions[0]
+            if solution and solution.actions:
+                next_action = solution.actions[0]
                 next_action.execute(state)
                 forklift_data.append_cell(Cell(state.line_forklift, state.column_forklift))
             else:
@@ -136,9 +135,8 @@ class WarehouseIndividual(IntVectorIndividual):
         state = copy.deepcopy(self.agent.initial_environment)
 
         forklifts_data_len = len(forklifts_data)
-        max_steps = 0
-
         for i in range(forklifts_data_len):
+            max_steps = 0
             forklift_data = forklifts_data[i]
 
             state.line_forklift = forklift_data.current_position.line
