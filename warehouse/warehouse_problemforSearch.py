@@ -30,6 +30,13 @@ class WarehouseProblemSearch(Problem[WarehouseState]):
             return self.goal_position.line == state.line_forklift and self.goal_position.column == state.column_forklift
 
         if self.goal_position.line == state.line_forklift:
-            return self.goal_position.column == state.column_forklift + 1 or self.goal_position.column == state.column_forklift - 1
+            if self.goal_position.column == state.column_forklift:
+                return True
 
-        return self.goal_position.line == state.line_forklift and self.goal_position.column == state.column_forklift
+            if self.goal_position.column == state.column_forklift + 1:
+                return True
+
+            if self.goal_position.column == state.column_forklift - 1:
+                return True
+
+        return False
