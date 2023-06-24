@@ -3,17 +3,18 @@ from PIL.ImageEnhance import Color
 from numpy import ndarray
 
 import constants
-from agentsearch.state import State
 from agentsearch.action import Action
-from warehouse.cell import Cell
+from agentsearch.state import State
 
 
 class WarehouseState(State[Action]):
 
-    def __init__(self, matrix: ndarray, rows, columns):
+    def __init__(self, matrix: ndarray, rows, columns, allow_collisions: bool = False):
         super().__init__()
 
+        self.allow_collisions = allow_collisions
         self.is_default = True
+
         self.rows = rows
         self.columns = columns
         self.matrix = np.full([self.rows, self.columns], fill_value=0, dtype=int)
@@ -28,9 +29,9 @@ class WarehouseState(State[Action]):
                     self.line_exit = i
                     self.column_exit = j
 
-    @staticmethod
-    def is_movable_cell(target_cell: Cell) -> bool:
-        return target_cell == constants.EMPTY or target_cell == constants.EXIT
+    def is_movable_cell(self, line: int, column: int) -> bool:
+        cell = self.matrix[line][column]
+        return cell == constants.EMPTY or cell == constants.EXIT or self.allow_collisions and cell == constants.FORKLIFT
 
     @staticmethod
     def can_not_move() -> bool:
@@ -40,41 +41,42 @@ class WarehouseState(State[Action]):
         if self.line_forklift <= 0:
             return False
 
-        target_cell = self.matrix[self.line_forklift - 1][self.column_forklift]
-        return self.is_movable_cell(target_cell)
+        return self.is_movable_cell(self.line_forklift - 1, self.column_forklift)
 
     def can_move_right(self) -> bool:
         if self.column_forklift == self.columns - 1:
             return False
 
-        target_cell = self.matrix[self.line_forklift][self.column_forklift + 1]
-        return self.is_movable_cell(target_cell)
+        return self.is_movable_cell(self.line_forklift, self.column_forklift + 1)
 
     def can_move_down(self) -> bool:
         if self.line_forklift == self.rows - 1:
             return False
 
-        target_cell = self.matrix[self.line_forklift + 1][self.column_forklift]
-        return self.is_movable_cell(target_cell)
+        return self.is_movable_cell(self.line_forklift + 1, self.column_forklift)
 
     def can_move_left(self) -> bool:
         if self.column_forklift <= 0:
             return False
 
-        target_cell = self.matrix[self.line_forklift][self.column_forklift - 1]
-        return self.is_movable_cell(target_cell)
+        return self.is_movable_cell(self.line_forklift, self.column_forklift - 1)
+
+    def catch_product(self) -> None:
+        if self.column_forklift > 0 and self.matrix[self.line_forklift][self.column_forklift - 1] == constants.PRODUCT:
+            self.matrix[self.line_forklift][self.column_forklift - 1] = constants.PRODUCT_CATCH
+
+        if self.column_forklift < self.columns - 1 and self.matrix[self.line_forklift][self.column_forklift + 1] == constants.PRODUCT:
+            self.matrix[self.line_forklift][self.column_forklift + 1] = constants.PRODUCT_CATCH
 
     def update_forklift_in_matrix(self, new_line: int, new_column: int):
         self.is_default = False
         if self.line_forklift != self.line_exit or self.column_forklift != self.column_exit:
-            old_cell_state = constants.EMPTY
-        else:
-            old_cell_state = constants.EXIT
+            self.matrix[self.line_forklift][self.column_forklift] = constants.EMPTY
 
-        self.matrix[self.line_forklift][self.column_forklift] = old_cell_state
         self.line_forklift = new_line
         self.column_forklift = new_column
-        self.matrix[new_line][new_column] = constants.FORKLIFT
+        if self.line_forklift != self.line_exit or self.column_forklift != self.column_exit:
+            self.matrix[new_line][new_column] = constants.FORKLIFT
 
     def not_move(self) -> None:
         pass
