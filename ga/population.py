@@ -1,6 +1,6 @@
 
-from ga.problem import Problem
 from ga.individual import Individual
+from ga.problem import Problem
 
 
 class Population:
@@ -14,7 +14,7 @@ class Population:
             for i in range(size):
                 self.individuals.append(problem.generate_individual())
 
-    def evaluate(self) -> Individual:
+    def evaluate(self, parallel_run: bool = False) -> Individual:
         for ind in self.individuals:
             ind.compute_fitness()
             if self.best_individual is None or ind.better_than(self.best_individual):

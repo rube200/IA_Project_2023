@@ -1,16 +1,16 @@
-from experiments.experiments_factory import ExperimentsFactory
 from experiments.experiment import Experiment
 from experiments.experiment_listener import ExperimentListener
-from ga.selection_methods.tournament import Tournament
-from ga.genetic_operators.recombination_cx import RecombinationCX
-from ga.genetic_operators.recombination_ox1 import RecombinationOX1
-from ga.genetic_operators.recombination_pmx import RecombinationPMX
+from experiments.experiments_factory import ExperimentsFactory
+from experiments_statistics.statistic_best_average import StatisticBestAverage
+from experiments_statistics.statistic_best_in_run import StatisticBestInRun
+from ga.genetic_algorithm import GeneticAlgorithm
 from ga.genetic_operators.mutation_insert import MutationInsert
 from ga.genetic_operators.mutation_psm import MutationPSM
 from ga.genetic_operators.mutation_rsm import MutationRSM
-from ga.genetic_algorithm import GeneticAlgorithm
-from experiments_statistics.statistic_best_in_run import StatisticBestInRun
-from experiments_statistics.statistic_best_average import StatisticBestAverage
+from ga.genetic_operators.recombination_cx import RecombinationCX
+from ga.genetic_operators.recombination_ox1 import RecombinationOX1
+from ga.genetic_operators.recombination_pmx import RecombinationPMX
+from ga.selection_methods.tournament import Tournament
 from warehouse.warehouse_agent_search import read_state_from_txt_file, WarehouseAgentSearch
 from warehouse.warehouse_problemforGA import WarehouseProblemGA
 from warehouse.warehouse_state import WarehouseState
@@ -30,6 +30,13 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
 
     def build_experiment(self) -> Experiment:
         self.num_runs = int(self.get_parameter_value('Runs'))
+
+        if self.contains_parameter('Parallel'):
+            self.parallel_run = bool(self.get_parameter_value('Parallel'))
+
+        if self.contains_parameter('Collisions'):
+            self.collisions = bool(self.get_parameter_value('Collisions'))
+
         self.population_size = int(self.get_parameter_value('Population_size'))
         self.max_generations = int(self.get_parameter_value('Max_generations'))
 
@@ -62,7 +69,7 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         # PROBLEM
         matrix, num_rows, num_columns = read_state_from_txt_file(self.get_parameter_value("Problem_file"))
 
-        agent_search = WarehouseAgentSearch(WarehouseState(matrix, num_rows, num_columns))
+        agent_search = WarehouseAgentSearch(WarehouseState(matrix, num_rows, num_columns, not self.collisions))
         agent_search.calculate_pairs_distances()
 
         self.problem = WarehouseProblemGA(agent_search)
@@ -94,7 +101,8 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
                 self.max_generations,
                 self.selection_method,
                 self.recombination_method,
-                self.mutation_method
+                self.mutation_method,
+                self.parallel_run
         )
 
         for statistic in self.statistics:

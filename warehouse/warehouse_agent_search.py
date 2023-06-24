@@ -1,7 +1,7 @@
-import copy
 from typing import TypeVar
 
 import numpy as np
+from joblib import Parallel, delayed
 
 import constants
 from agentsearch.agent import Agent
@@ -53,26 +53,34 @@ class WarehouseAgentSearch(Agent):
             string += f"{p}\n"
         return string
 
-    def calculate_pairs_distances(self):
-        for pair in self.pairs:
-            state = WarehouseState(self.initial_environment.matrix, self.initial_environment.rows, self.initial_environment.columns)
-            pair_line = pair.cell1.line
-            pair_column = pair.cell1.column
+    def calculate_pairs_distances(self, parallel_run: bool = False):
+        if parallel_run:
+            self.pairs = Parallel(n_jobs=-2)(delayed(self.calculate_pair_distance)(pair) for pair in self.pairs)
+        else:
+            for pair in self.pairs:
+                self.calculate_pair_distance(pair)
 
-            cell_data = state.matrix[pair_line][pair_column]
-            if state.is_movable_cell(cell_data) or cell_data == constants.FORKLIFT:
-                state.update_forklift_in_matrix(pair_line, pair_column)
-            elif pair_column > 0 and state.is_movable_cell(state.matrix[pair_line][pair_column - 1]):
-                state.update_forklift_in_matrix(pair_line, pair_column - 1)
-            elif pair_column < state.columns - 1 and state.is_movable_cell(state.matrix[pair_line][pair_column + 1]):
-                state.update_forklift_in_matrix(pair_line, pair_column + 1)
-            else:
-                state.update_forklift_in_matrix(pair_line, pair_column)
+    def calculate_pair_distance(self, pair: Pair):
+        state = WarehouseState(self.initial_environment.matrix, self.initial_environment.rows, self.initial_environment.columns)
+        pair_line = pair.cell1.line
+        pair_column = pair.cell1.column
 
-            problem = WarehouseProblemSearch(state, pair.cell2)
-            solution = self.solve_problem(problem)
-            pair.actions = solution.actions
-            pair.value = solution.cost
+        if state.is_movable_cell(pair_line, pair_column) or state.matrix[pair_line][pair_column] == constants.FORKLIFT:
+            state.update_forklift_in_matrix(pair_line, pair_column)
+        elif pair_column > 0 and state.is_movable_cell(pair_line, pair_column - 1):
+            state.update_forklift_in_matrix(pair_line, pair_column - 1)
+        elif pair_column < state.columns - 1 and state.is_movable_cell(pair_line, pair_column + 1):
+            state.update_forklift_in_matrix(pair_line, pair_column + 1)
+        else:
+            state.update_forklift_in_matrix(pair_line, pair_column)
+
+        problem = WarehouseProblemSearch(state, pair.cell2)
+        agent = Agent()
+        agent.heuristic = self.heuristic
+        solution = agent.solve_problem(problem)
+        pair.actions = solution.actions
+        pair.value = solution.cost
+        return pair
 
     def get_pair(self, cell1: Cell, cell2: Cell) -> Pair | None:
         for pair in self.pairs:

@@ -1,9 +1,10 @@
 
-from random import Random
 import copy
+from random import Random
+
+from ga.ga_event import GAEvent
 from ga.population import Population
 from ga.selection_methods.selection_method import SelectionMethod
-from ga.ga_event import GAEvent
 
 
 class GeneticAlgorithm:
@@ -16,13 +17,15 @@ class GeneticAlgorithm:
                  max_generations: int,
                  selection_method: SelectionMethod,
                  recombination: "Recombination",
-                 mutation: "Mutation"):
+                 mutation: "Mutation",
+                 parallel_run: bool = False):
         GeneticAlgorithm.rand = Random(seed)
         self.population_size = population_size
         self.max_generations = max_generations
         self.selection_method = selection_method
         self.recombination_method = recombination
         self.mutation_method = mutation
+        self.parallel_run = parallel_run
         self.population = None
         self.generation = 0
         self.stopped = False
@@ -38,7 +41,7 @@ class GeneticAlgorithm:
             return None
         self.generation = 0
         self.population = Population(self.population_size, self.problem)
-        self.population.evaluate()
+        self.population.evaluate(self.parallel_run)
         self.best_in_run = self.population.best_individual
         self.fire_generation_ended()
 
@@ -46,7 +49,7 @@ class GeneticAlgorithm:
             self.population = self.selection_method.run(self.population)
             self.recombination_method.run(self.population)
             self.mutation_method.run(self.population)
-            self.population.evaluate()
+            self.population.evaluate(self.parallel_run)
             if self.population.best_individual.better_than(self.best_in_run):
                 self.best_in_run = copy.deepcopy(self.population.best_individual)
             self.generation += 1

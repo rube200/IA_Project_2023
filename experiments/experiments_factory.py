@@ -1,6 +1,8 @@
 
 from abc import ABC, abstractmethod
+
 import numpy as np
+
 from experiments.experiment import Experiment
 from experiments.parameter import Parameter
 from ga.genetic_algorithm import GeneticAlgorithm
@@ -10,6 +12,8 @@ class ExperimentsFactory(ABC):
 
     def __init__(self, filename: str):
         self.num_runs = None
+        self.parallel_run = False
+        self.collisions = False
         self.parameters = None
         self.ordered_parameters_array = None
         self.statistics_names = []
@@ -76,6 +80,9 @@ class ExperimentsFactory(ABC):
                 tokens = line.split(':')
                 self.statistics_names.append(tokens[1].strip())
         file.close()
+
+    def contains_parameter(self, parameter_name: str) -> bool:
+        return parameter_name in self.parameters
 
     def get_parameter_value(self, parameter_name: str) -> str:
         return self.parameters.get(parameter_name).get_active_value()

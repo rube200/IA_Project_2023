@@ -1,11 +1,12 @@
 
-import threading
 import copy
+import threading
+
+from ga.ga_event import GAEvent
 from ga.genetic_algorithm import GeneticAlgorithm
 from ga.genetic_operators.mutation import Mutation
-from ga.selection_methods.selection_method import SelectionMethod
 from ga.genetic_operators.recombination import Recombination
-from ga.ga_event import GAEvent
+from ga.selection_methods.selection_method import SelectionMethod
 
 
 class GeneticAlgorithmThread(GeneticAlgorithm, threading.Thread):
@@ -16,7 +17,8 @@ class GeneticAlgorithmThread(GeneticAlgorithm, threading.Thread):
                  max_generations: int,
                  selection_method: SelectionMethod,
                  recombination: Recombination,
-                 mutation: Mutation):
+                 mutation: Mutation,
+                 parallel_run: bool = False):
         GeneticAlgorithm.__init__(
             self,
             seed,
@@ -24,7 +26,8 @@ class GeneticAlgorithmThread(GeneticAlgorithm, threading.Thread):
             max_generations,
             selection_method,
             recombination,
-            mutation)
+            mutation,
+            parallel_run)
         threading.Thread.__init__(self)
         self.tkinter_listeners = []
 

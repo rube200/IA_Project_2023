@@ -3,6 +3,8 @@ import copy
 from ga.genetic_algorithm import GeneticAlgorithm
 from ga.individual_int_vector import IntVectorIndividual
 from warehouse.cell import Cell
+from warehouse.dynamic_forklift import DynamicForklift
+from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
 from warehouse.warehouse_state import WarehouseState
 
 
@@ -30,12 +32,9 @@ class WarehouseIndividual(IntVectorIndividual):
     def compute_fitness(self) -> float:
         self.fitness = 0
 
-        forklifts = self.agent.forklifts
         forklift_index = 0
-
-        forklifts_gene = [[] * 1] * len(forklifts)
-        # noinspection PyTypeChecker
-        forklifts_gene[forklift_index] = []
+        forklifts = self.agent.forklifts
+        forklifts_data = [DynamicForklift(forklifts[forklift_index])]
 
         products = self.agent.products
         products_size = len(products)
@@ -44,52 +43,135 @@ class WarehouseIndividual(IntVectorIndividual):
             gene = self.genome[g]
             if gene >= products_size:
                 forklift_index = gene - products_size + 1
-                forklifts_gene[forklift_index] = []
+                forklifts_data.append(DynamicForklift(forklifts[forklift_index]))
             else:
-                forklifts_gene[forklift_index].append(gene)
+                product = products[gene]
+                forklifts_data[forklift_index].append_product(product)
 
-        forklifts_paths = [[] * 1] * len(forklifts)
+        if not self.agent.initial_environment.allow_collisions:
+            self.compute_fitness_by_simulation(forklifts_data)
+        else:
+            self.compute_fitness_without_collision(forklifts_data)
+
+        self.best_forklift_path = []
+        for forklift_data in forklifts_data:
+            self.fitness += forklift_data.steps
+            self.best_forklift_path.append(forklift_data.path)
+            if forklift_data.steps > self.steps:
+                self.steps = forklift_data.steps
+
+        return self.fitness
+
+    def compute_fitness_by_simulation(self, forklifts_data: []):
+        forklifts_data_len = len(forklifts_data)
+        forklift_index = 0
+        state = copy.deepcopy(self.agent.initial_environment)
+        while any(not forklift_data.in_exit for forklift_data in forklifts_data):
+            forklift_data = forklifts_data[forklift_index]
+            if forklift_data.move_tries > 3:
+                forklift_data.in_exit = True
+                forklift_data.steps = 999
+                forklift_index += 1
+                forklift_index %= forklifts_data_len
+                continue
+
+            if forklift_data.in_exit:
+                forklift_index += 1
+                forklift_index %= forklifts_data_len
+                continue
+
+            state.line_forklift = forklift_data.current_position.line
+            state.column_forklift = forklift_data.current_position.column
+
+            target_cell = product = forklift_data.get_current_product()
+            if target_cell is None:
+                target_cell = self.agent.exit
+
+            if not state.is_movable_cell(target_cell.line, target_cell.column):
+                best_distance_to_cell = -1
+                best_distance_to_forklift = -1
+                for line in range(state.rows):
+                    for column in range(state.columns):
+                        if not state.is_movable_cell(line, column):
+                            continue
+
+                        forklift_distance = abs(line - state.line_forklift) + abs(column - state.column_forklift)
+                        product_distance = abs(line - product.line) * 2 + abs(column - product.column)
+                        if best_distance_to_cell == -1 or product_distance < best_distance_to_cell:
+                            best_distance_to_cell = product_distance
+                            best_distance_to_forklift = forklift_distance
+                            target_cell = Cell(line, column)
+                            continue
+
+                        if product_distance > best_distance_to_cell:
+                            continue
+
+                        if forklift_distance < best_distance_to_forklift:
+                            best_distance_to_cell = product_distance
+                            best_distance_to_forklift = forklift_distance
+                            target_cell = Cell(line, column)
+
+            problem = WarehouseProblemSearch(state, target_cell)
+            solution = self.agent.solve_problem(problem)
+
+            actions = solution.actions
+            if actions:
+                next_action = actions[0]
+                next_action.execute(state)
+                forklift_data.append_cell(Cell(state.line_forklift, state.column_forklift))
+            else:
+                forklift_data.move_tries += 1
+
+            if problem.is_goal(state):
+                if product is not None:
+                    state.catch_product()
+                    forklift_data.current_product_index += 1
+                else:
+                    forklift_data.in_exit = True
+
+            forklift_index += 1
+            forklift_index %= forklifts_data_len
+
+    def compute_fitness_without_collision(self, forklifts_data: []):
         state = copy.deepcopy(self.agent.initial_environment)
 
-        for fk in range(len(forklifts_gene)):
-            forklift = forklifts[fk]
-            forklifts_paths[fk] = [forklift]
+        forklifts_data_len = len(forklifts_data)
+        max_steps = 0
 
-            state.line_forklift = forklift.line
-            state.column_forklift = forklift.column
+        for i in range(forklifts_data_len):
+            forklift_data = forklifts_data[i]
 
-            temp_steps = 0
-            for g in range(len(forklifts_gene[fk])):
-                gene = forklifts_gene[fk][g]
-                product = products[gene]
+            state.line_forklift = forklift_data.current_position.line
+            state.column_forklift = forklift_data.current_position.column
 
-                steps = self.simulate_actions(forklift, product, state, forklifts_paths[fk])
-                temp_steps += steps
+            for product in forklift_data.products:
+                steps = self.move_forklift_without_collision(forklift_data, product, state)
+                max_steps += steps
                 self.fitness += steps
-                forklift = product
 
-            steps = self.simulate_actions(forklift, self.agent.exit, state, forklifts_paths[fk])
-            temp_steps += steps
+            steps = self.move_forklift_without_collision(forklift_data, self.agent.exit, state)
+            max_steps += steps
             self.fitness += steps
 
-            if self.steps < temp_steps:
-                self.steps = temp_steps
+            if self.steps < max_steps:
+                self.steps = max_steps
 
-        self.best_forklift_path = forklifts_paths
-        return self.fitness
+    def move_forklift_without_collision(self, forklift_data, cell2: Cell, state: WarehouseState) -> int:
+        temp_steps = 0
+        pair = self.agent.get_pair(Cell(state.line_forklift, state.column_forklift), cell2)
+        print(state)
+        for action in pair.actions:
+            action.execute(state)
+            print(state)
+            forklift_data.append_cell(Cell(state.line_forklift, state.column_forklift))
+            temp_steps += 1
+
+        state.line_forklift = cell2.line
+        state.column_forklift = cell2.column
+        return temp_steps
 
     def obtain_all_path(self):
         return self.best_forklift_path, self.steps + 1
-
-    def simulate_actions(self, cell1: Cell, cell2: Cell, state: WarehouseState, forklift_paths) -> int:
-        temp_steps = 0
-        pair = self.agent.get_pair(cell1, cell2)
-        for action in pair.actions:
-            action.execute(state)
-            new_cell = Cell(state.line_forklift, state.column_forklift)
-            forklift_paths.append(new_cell)
-            temp_steps += 1
-        return temp_steps
 
     def __str__(self):
         string = f'Fitness: {self.fitness}\nA->'

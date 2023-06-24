@@ -1,10 +1,6 @@
-import cProfile
 import copy
-import io
-import pstats
 import queue
 import threading
-import time
 import tkinter as tk
 from tkinter import filedialog as fd
 from tkinter import messagebox
@@ -153,6 +149,14 @@ class Window(tk.Tk):
         self.entry_mutation_prob.insert(tk.END, '0.1')
         self.entry_mutation_prob.grid(row=8, column=1)
 
+        self.parallel_run = tk.BooleanVar(value=True)
+        self.parallel_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Parallel', variable=self.parallel_run, command=self.parallel_button_clicked)
+        self.parallel_checkbox.grid(row=9, column=0)
+
+        self.collisions_run = tk.BooleanVar(value=False)
+        self.collisions_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Collisions', variable=self.collisions_run, command=self.collisions_button_clicked)
+        self.collisions_checkbox.grid(row=9, column=1)
+
         # 1.1.2 Run Panel
 
         self.button_dataset = tk.Button(master=self.panel_run, text='Problem',
@@ -268,6 +272,14 @@ class Window(tk.Tk):
                             simulation=tk.DISABLED, stop_simulation=tk.DISABLED)
         # End of constructor -----------------------------------
 
+    def parallel_button_clicked(self):
+        if not self.parallel_run.get():
+            self.collisions_checkbox.deselect()
+
+    def collisions_button_clicked(self):
+        if self.collisions_run.get():
+            self.parallel_checkbox.select()
+
     def problem_button_clicked(self):
         filename = fd.askopenfilename(initialdir='.')
         if filename:
@@ -302,7 +314,7 @@ class Window(tk.Tk):
                             open_experiments=tk.DISABLED, run_experiments=tk.DISABLED, stop_experiments=tk.DISABLED,
                             simulation=tk.DISABLED, stop_simulation=tk.DISABLED)
 
-        self.solver = SearchSolver(self, self.agent_search)
+        self.solver = SearchSolver(self, self.agent_search, self.parallel_run.get())
         self.solver.daemon = True
         self.solver.start()
 
@@ -333,7 +345,8 @@ class Window(tk.Tk):
             int(self.entry_num_generations.get()),
             selection_method,
             recombination_method,
-            mutation_method
+            mutation_method,
+            self.parallel_run.get()
         )
 
         self.queue.queue.clear()
@@ -342,6 +355,7 @@ class Window(tk.Tk):
         self.average_values = []
         self.best_values = []
 
+        self.problem_ga.agent_search.initial_environment.allow_collisions = not self.collisions_run.get()
         self.genetic_algorithm.problem = self.problem_ga
         self.genetic_algorithm.add_tkinter_listener(self)
         self.genetic_algorithm.daemon = True
@@ -624,16 +638,17 @@ class ExperimentsRunner(threading.Thread):
 
 class SearchSolver(threading.Thread):
 
-    def __init__(self, gui: Window, agent: WarehouseAgentSearch):
+    def __init__(self, gui: Window, agent: WarehouseAgentSearch, parallel_run: bool = False):
         super(SearchSolver, self).__init__()
         self.gui = gui
         self.agent = agent
+        self.parallel_run = parallel_run
 
     def stop(self):
         self.agent.stop()
 
     def run(self):
-        self.agent.calculate_pairs_distances()
+        self.agent.calculate_pairs_distances(self.parallel_run)
 
         self.agent.search_method.stopped = True
         self.gui.problem_ga = WarehouseProblemGA(self.agent)
