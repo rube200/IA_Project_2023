@@ -53,6 +53,7 @@ class WarehouseAgentSearch(Agent):
 
     def calculate_pairs_distances(self):
         state = self.initial_environment.soft_copy()
+        state.allow_collisions = True
         for pair in self.pairs:
             pair_line = pair.cell1.line
             pair_column = pair.cell1.column

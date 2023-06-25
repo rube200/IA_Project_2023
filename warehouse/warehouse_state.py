@@ -114,7 +114,7 @@ class WarehouseState(State[Action]):
             for column in row:
                 matrix_string += str(column) + " "
             matrix_string += "\n"
-        return matrix_string
+        return matrix_string + f"{self.line_forklift}-{self.column_forklift}\n"
 
     def __eq__(self, other):
         if isinstance(other, WarehouseState):

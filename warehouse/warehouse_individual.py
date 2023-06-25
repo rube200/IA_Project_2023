@@ -1,6 +1,7 @@
 from agentsearch.action import Action
 from ga.genetic_algorithm import GeneticAlgorithm
 from ga.individual_int_vector import IntVectorIndividual
+from warehouse.actions import ActionNoMove
 from warehouse.cell import Cell
 from warehouse.dynamic_forklift import DynamicForklift
 from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
@@ -109,10 +110,8 @@ class WarehouseIndividual(IntVectorIndividual):
 
             if forklift_data.move_tries > 3:
                 forklift_data.in_exit = True
-                forklift_data.steps = 999
-                forklift_index += 1
-                forklift_index %= forklifts_len
-                continue
+                fitness += 999
+                break
 
             action = self.get_next_simulation_action(forklift_data)
             if action is None:
@@ -127,25 +126,27 @@ class WarehouseIndividual(IntVectorIndividual):
             if not action.is_valid(state):
                 state_copy = state.soft_copy()
                 new_path = self.search_alternative_path(forklift_data, state_copy)
-                if not new_path:
-                    forklift_index += 1
-                    forklift_index %= forklifts_len
-                    continue
-
-                action = self.get_next_simulation_action(forklift_data)
-                if action is None:
-                    forklift_data.in_exit = True
-                    forklift_index += 1
-                    forklift_index %= forklifts_len
-                    continue
+                if new_path:
+                    action = self.get_next_simulation_action(forklift_data)
+                    if action is None:
+                        forklift_data.in_exit = True
+                        forklift_index += 1
+                        forklift_index %= forklifts_len
+                        continue
+                    else:
+                        forklift_data.move_tries = 0
+                else:
+                    action = ActionNoMove()
+                    forklift_data.move_tries += 1
+            else:
+                forklift_data.move_tries = 0
 
             action.execute(state)
-            fitness += 1
+            fitness += action.cost
             self.forklifts_actions[forklift_index].append(action)
 
             forklift_data.current_position.line = state.line_forklift
             forklift_data.current_position.column = state.column_forklift
-            forklift_data.move_tries = 0
             forklift_data.next_action()
 
             forklift_index += 1

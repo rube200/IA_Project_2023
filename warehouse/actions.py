@@ -64,3 +64,18 @@ class ActionLeft(Action[WarehouseState]):
 
     def __str__(self):
         return "LEFT"
+
+
+class ActionNoMove(Action[WarehouseState]):
+
+    def __init__(self):
+        Action.__init__(self, 2)
+
+    def execute(self, state: WarehouseState) -> None:
+        state.action = self
+
+    def is_valid(self, state: WarehouseState) -> bool:
+        return True
+
+    def __str__(self):
+        return "NO MOVE"
