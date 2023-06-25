@@ -9,7 +9,7 @@ from agentsearch.state import State
 
 class WarehouseState(State[Action]):
 
-    def __init__(self, matrix: ndarray, rows, columns, allow_collisions: bool = True):
+    def __init__(self, matrix: ndarray, rows, columns, process_matrix: bool = True, allow_collisions: bool = True):
         super().__init__()
 
         self.allow_collisions = allow_collisions
@@ -17,7 +17,10 @@ class WarehouseState(State[Action]):
 
         self.rows = rows
         self.columns = columns
-        self.matrix = np.full([self.rows, self.columns], fill_value=0, dtype=int)
+        self.matrix = matrix.copy()
+
+        if not process_matrix:
+            return
 
         for i in range(self.rows):
             for j in range(self.columns):
@@ -40,13 +43,13 @@ class WarehouseState(State[Action]):
         return self.is_movable_cell(self.line_forklift - 1, self.column_forklift)
 
     def can_move_right(self) -> bool:
-        if self.column_forklift == self.columns - 1:
+        if self.column_forklift >= self.columns - 1:
             return False
 
         return self.is_movable_cell(self.line_forklift, self.column_forklift + 1)
 
     def can_move_down(self) -> bool:
-        if self.line_forklift == self.rows - 1:
+        if self.line_forklift >= self.rows - 1:
             return False
 
         return self.is_movable_cell(self.line_forklift + 1, self.column_forklift)
@@ -97,6 +100,14 @@ class WarehouseState(State[Action]):
         }
         return switcher.get(self.matrix[row][column], constants.COLOREMPTY)
 
+    def soft_copy(self) -> "WarehouseState":
+        new_state = self.__class__(self.matrix, self.rows, self.columns, False, self.allow_collisions)
+        new_state.line_forklift = self.line_forklift
+        new_state.column_forklift = self.column_forklift
+        new_state.line_exit = self.line_exit
+        new_state.column_exit = self.column_exit
+        return new_state
+
     def __str__(self):
         matrix_string = str(self.rows) + " " + str(self.columns) + "\n"
         for row in self.matrix:
@@ -111,4 +122,4 @@ class WarehouseState(State[Action]):
         return NotImplemented
 
     def __hash__(self):
-        return hash(self.matrix.tostring())
+        return hash((self.matrix.tostring(), self.line_forklift, self.column_forklift))

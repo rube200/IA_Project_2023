@@ -274,7 +274,7 @@ class Window(tk.Tk):
         if filename:
             matrix, num_rows, num_columns = read_state_from_txt_file(filename)
             self.initial_state = WarehouseState(matrix, num_rows, num_columns)
-            self.agent_search = WarehouseAgentSearch(WarehouseState(matrix, num_rows, num_columns))
+            self.agent_search = WarehouseAgentSearch(self.initial_state.soft_copy())
             self.solution = None
             self.text_problem.delete("1.0", "end")
             self.text_problem.insert(tk.END, str(self.initial_state) + "\n" + str(self.agent_search))
