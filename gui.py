@@ -149,14 +149,9 @@ class Window(tk.Tk):
         self.entry_mutation_prob.insert(tk.END, '0.1')
         self.entry_mutation_prob.grid(row=8, column=1)
 
-        self.parallel_run = tk.BooleanVar(value=False)
-        self.parallel_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Parallel',
-                                                variable=self.parallel_run, command=self.parallel_button_clicked)
-        self.parallel_checkbox.grid(row=9, column=0)
-
         self.collisions_run = tk.BooleanVar(value=False)
         self.collisions_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Collisions',
-                                                  variable=self.collisions_run, command=self.collisions_button_clicked)
+                                                  variable=self.collisions_run)
         self.collisions_checkbox.grid(row=9, column=1)
 
         # 1.1.2 Run Panel
@@ -274,16 +269,6 @@ class Window(tk.Tk):
                             simulation=tk.DISABLED, stop_simulation=tk.DISABLED)
         # End of constructor -----------------------------------
 
-    def parallel_button_clicked(self):
-        # if not self.parallel_run.get():
-        #    self.collisions_checkbox.deselect()
-        pass
-
-    def collisions_button_clicked(self):
-        # if self.collisions_run.get():
-        #    self.parallel_checkbox.select()
-        pass
-
     def problem_button_clicked(self):
         filename = fd.askopenfilename(initialdir='.')
         if filename:
@@ -318,7 +303,7 @@ class Window(tk.Tk):
                             open_experiments=tk.DISABLED, run_experiments=tk.DISABLED, stop_experiments=tk.DISABLED,
                             simulation=tk.DISABLED, stop_simulation=tk.DISABLED)
 
-        self.solver = SearchSolver(self, self.agent_search, self.parallel_run.get())
+        self.solver = SearchSolver(self, self.agent_search)
         self.solver.daemon = True
         self.solver.start()
 
@@ -349,8 +334,7 @@ class Window(tk.Tk):
             int(self.entry_num_generations.get()),
             selection_method,
             recombination_method,
-            mutation_method,
-            self.parallel_run.get()
+            mutation_method
         )
 
         self.queue.queue.clear()
@@ -642,17 +626,16 @@ class ExperimentsRunner(threading.Thread):
 
 class SearchSolver(threading.Thread):
 
-    def __init__(self, gui: Window, agent: WarehouseAgentSearch, parallel_run: bool = False):
+    def __init__(self, gui: Window, agent: WarehouseAgentSearch):
         super(SearchSolver, self).__init__()
         self.gui = gui
         self.agent = agent
-        self.parallel_run = parallel_run
 
     def stop(self):
         self.agent.stop()
 
     def run(self):
-        self.agent.calculate_pairs_distances(self.parallel_run)
+        self.agent.calculate_pairs_distances()
 
         self.agent.search_method.stopped = True
         self.gui.problem_ga = WarehouseProblemGA(self.agent)

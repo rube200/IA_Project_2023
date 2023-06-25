@@ -31,9 +31,6 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
     def build_experiment(self) -> Experiment:
         self.num_runs = int(self.get_parameter_value('Runs'))
 
-        if self.contains_parameter('Parallel'):
-            self.parallel_run = bool(self.get_parameter_value('Parallel'))
-
         if self.contains_parameter('Collisions'):
             self.collisions = bool(self.get_parameter_value('Collisions'))
 
@@ -101,8 +98,7 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
                 self.max_generations,
                 self.selection_method,
                 self.recombination_method,
-                self.mutation_method,
-                self.parallel_run
+                self.mutation_method
         )
 
         for statistic in self.statistics:

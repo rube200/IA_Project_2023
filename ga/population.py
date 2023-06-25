@@ -1,5 +1,3 @@
-from joblib import delayed, Parallel
-
 from ga.individual import Individual
 from ga.problem import Problem
 
@@ -15,17 +13,11 @@ class Population:
             for i in range(size):
                 self.individuals.append(problem.generate_individual())
 
-    def evaluate(self, parallel_run: bool = False) -> Individual:
-        if parallel_run:
-            self.individuals = Parallel(n_jobs=-2)(delayed(self.compute_ind)(ind) for ind in self.individuals)
-        else:
-            for ind in self.individuals:
-                self.compute_ind(ind)
-
+    def evaluate(self) -> Individual:
         for ind in self.individuals:
+            ind.compute_fitness()
             if self.best_individual is None or ind.better_than(self.best_individual):
                 self.best_individual = ind
-
         return self.best_individual
 
     @staticmethod

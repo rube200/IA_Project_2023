@@ -16,15 +16,13 @@ class GeneticAlgorithm:
                  max_generations: int,
                  selection_method: SelectionMethod,
                  recombination: "Recombination",
-                 mutation: "Mutation",
-                 parallel_run: bool = False):
+                 mutation: "Mutation"):
         GeneticAlgorithm.rand = Random(seed)
         self.population_size = population_size
         self.max_generations = max_generations
         self.selection_method = selection_method
         self.recombination_method = recombination
         self.mutation_method = mutation
-        self.parallel_run = parallel_run
         self.population = None
         self.generation = 0
         self.stopped = False
@@ -39,10 +37,9 @@ class GeneticAlgorithm:
         if self.problem is None:
             return None
 
-        start_time = time.perf_counter_ns()
         self.generation = 0
         self.population = Population(self.population_size, self.problem)
-        self.population.evaluate(self.parallel_run)
+        self.population.evaluate()
         self.best_in_run = self.population.best_individual
         self.fire_generation_ended()
 
@@ -50,13 +47,12 @@ class GeneticAlgorithm:
             self.population = self.selection_method.run(self.population)
             self.recombination_method.run(self.population)
             self.mutation_method.run(self.population)
-            self.population.evaluate(self.parallel_run)
+            self.population.evaluate()
             if self.population.best_individual.better_than(self.best_in_run):
                 self.best_in_run = copy.deepcopy(self.population.best_individual)
             self.generation += 1
             self.fire_generation_ended()
         self.fire_run_ended()
-        print("Performance: ", time.perf_counter_ns() - start_time)
 
     def __str__(self):
         return "GA: \n" + str(self.population)

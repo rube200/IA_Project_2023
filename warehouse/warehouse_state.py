@@ -9,7 +9,7 @@ from agentsearch.state import State
 
 class WarehouseState(State[Action]):
 
-    def __init__(self, matrix: ndarray, rows, columns, allow_collisions: bool = False):
+    def __init__(self, matrix: ndarray, rows, columns, allow_collisions: bool = True):
         super().__init__()
 
         self.allow_collisions = allow_collisions
@@ -56,13 +56,6 @@ class WarehouseState(State[Action]):
             return False
 
         return self.is_movable_cell(self.line_forklift, self.column_forklift - 1)
-
-    def catch_product(self) -> None:
-        if self.column_forklift > 0 and self.matrix[self.line_forklift][self.column_forklift - 1] == constants.PRODUCT:
-            self.matrix[self.line_forklift][self.column_forklift - 1] = constants.PRODUCT_CATCH
-
-        if self.column_forklift < self.columns - 1 and self.matrix[self.line_forklift][self.column_forklift + 1] == constants.PRODUCT:
-            self.matrix[self.line_forklift][self.column_forklift + 1] = constants.PRODUCT_CATCH
 
     def update_forklift_in_matrix(self, new_line: int, new_column: int):
         self.is_default = False
