@@ -66,7 +66,7 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         # PROBLEM
         matrix, num_rows, num_columns = read_state_from_txt_file(self.get_parameter_value("Problem_file"))
 
-        agent_search = WarehouseAgentSearch(WarehouseState(matrix, num_rows, num_columns, not self.collisions))
+        agent_search = WarehouseAgentSearch(WarehouseState(matrix, num_rows, num_columns, allow_collisions=not self.collisions))
         agent_search.calculate_pairs_distances()
 
         self.problem = WarehouseProblemGA(agent_search)

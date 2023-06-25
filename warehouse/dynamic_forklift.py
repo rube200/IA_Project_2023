@@ -4,23 +4,15 @@ from warehouse.cell import Cell
 
 class DynamicForklift:
     def __init__(self, initial_cell: Cell):
-        self.current_position = initial_cell
+        self.current_position = initial_cell.copy()
         self.in_exit = False
         self.move_tries = 0
         self.targets_info = []
         self.current_action_index = 0
         self.current_target_index = 0
-        self.path = [initial_cell]
-        self.steps = 0
 
-    def append_cell(self, cell: Cell):
-        self.current_position = cell
-        self.path.append(cell)
-        self.move_tries = 0
-        self.steps += 1
-
-    def append_target_cell(self, cell: Cell, actions: [Action]):
-        self.targets_info.append((cell, actions))
+    def append_target(self, cell: Cell, info: [int | Action]):
+        self.targets_info.append((cell, info))
 
     def get_actions(self) -> [Action]:
         if self.current_target_index >= len(self.targets_info):
@@ -37,14 +29,24 @@ class DynamicForklift:
         return actions[self.current_action_index]
 
     def get_target(self) -> Cell | None:
-        if not self.have_targets():
+        if not self.have_target():
             return None
 
         target, _ = self.targets_info[self.current_target_index]
         return target
 
-    def have_targets(self) -> bool:
+    def get_target_cost(self) -> (Cell, int):
+        if not self.have_target():
+            return None
+
+        _, cost = self.targets_info[self.current_target_index]
+        return cost
+
+    def have_target(self) -> bool:
         return self.current_target_index < len(self.targets_info)
+
+    def have_more_targets(self) -> bool:
+        return self.current_target_index + 1< len(self.targets_info)
 
     def next_action(self):
         self.current_action_index += 1

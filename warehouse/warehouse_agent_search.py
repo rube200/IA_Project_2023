@@ -9,7 +9,6 @@ from warehouse.cell import Cell
 from warehouse.heuristic_warehouse import HeuristicWarehouse
 from warehouse.pair import Pair
 from warehouse.warehouse_problemforSearch import WarehouseProblemSearch
-from warehouse.warehouse_state import WarehouseState
 
 
 class WarehouseAgentSearch(Agent):
@@ -53,12 +52,12 @@ class WarehouseAgentSearch(Agent):
         return string
 
     def calculate_pairs_distances(self):
+        state = self.initial_environment.soft_copy()
         for pair in self.pairs:
-            state = WarehouseState(self.initial_environment.matrix, self.initial_environment.rows, self.initial_environment.columns)
             pair_line = pair.cell1.line
             pair_column = pair.cell1.column
 
-            if state.is_movable_cell(pair_line, pair_column) or state.matrix[pair_line][pair_column] == constants.FORKLIFT:
+            if state.is_movable_cell(pair_line, pair_column):
                 state.update_forklift_in_matrix(pair_line, pair_column)
             elif pair_column > 0 and state.is_movable_cell(pair_line, pair_column - 1):
                 state.update_forklift_in_matrix(pair_line, pair_column - 1)
@@ -69,30 +68,32 @@ class WarehouseAgentSearch(Agent):
 
             problem = WarehouseProblemSearch(state, pair.cell2)
             solution = self.solve_problem(problem)
-            pair.actions = solution.actions
+            try:
+                pair.actions = solution.actions
+            except:
+                exit(1)
+            pair.invert_actions()
             pair.value = solution.cost
 
-    def get_pair(self, cell1: Cell, cell2: Cell) -> Pair | None:
+    def get_pair(self, cell1: Cell, cell2: Cell) -> (Pair | None, bool | None):
         for pair in self.pairs:
-            if pair.cell1.line == cell1.line and pair.cell1.column == cell1.column \
-                    and pair.cell2.line == cell2.line and pair.cell2.column == cell2.column:
-                return pair
-            elif pair.cell1.line == cell2.line and pair.cell1.column == cell2.column \
-                    and pair.cell2.line == cell1.line and pair.cell2.column == cell1.column:
-                return ~pair
+            if pair.is_pair(cell1, cell2):
+                return pair, True
+            elif pair.is_pair(cell2, cell1):
+                return pair, False
 
-        return None
+        return None, None
 
     def get_distance(self, cell1: Cell, cell2: Cell) -> int:
-        pair = self.get_pair(cell1, cell2)
+        pair, _ = self.get_pair(cell1, cell2)
         if pair:
             return pair.value
 
-        return self.initial_environment.rows + self.initial_environment.columns + 1
+        return 999
 
 
 def read_state_from_txt_file(filename: str):
     with open(filename, 'r') as file:
         num_rows, num_columns = map(int, file.readline().split())
-        float_puzzle = np.genfromtxt(file, delimiter=' ')
-        return float_puzzle, num_rows, num_columns
+        int_puzzle = np.genfromtxt(file, dtype=int, delimiter=' ')
+        return int_puzzle, num_rows, num_columns

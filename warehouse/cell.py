@@ -10,3 +10,9 @@ class Cell:
 
     def __str__(self) -> str:
         return f"{self.line}-{self.column}"
+
+    def is_cell(self, other: "Cell") -> bool:
+        return self.line == other.line and self.column == other.column
+
+    def copy(self):
+        return self.__class__(self.line, self.column)

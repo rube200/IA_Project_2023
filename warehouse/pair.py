@@ -5,6 +5,7 @@ from warehouse.cell import Cell
 class Pair:
     def __init__(self, cell1: Cell, cell2: Cell):
         self.actions = []
+        self.actions_reversed = []
         self.cell1 = cell1
         self.cell2 = cell2
         self.value = 0
@@ -26,18 +27,16 @@ class Pair:
         string += '\n'
         return string
 
-    def __invert__(self):
-        new_pair = Pair(self.cell2, self.cell1)
-
+    def invert_actions(self):
         for action in self.actions[::-1]:
             if type(action) == ActionUp:
-                new_pair.actions.append(ActionDown())
+                self.actions_reversed.append(ActionDown())
             elif type(action) == ActionDown:
-                new_pair.actions.append(ActionUp())
+                self.actions_reversed.append(ActionUp())
             elif type(action) == ActionLeft:
-                new_pair.actions.append(ActionRight())
+                self.actions_reversed.append(ActionRight())
             elif type(action) == ActionRight:
-                new_pair.actions.append(ActionLeft())
+                self.actions_reversed.append(ActionLeft())
 
-        new_pair.value = self.value
-        return new_pair
+    def is_pair(self, cell1: Cell, cell2: Cell):
+        return self.cell1.is_cell(cell1) and self.cell2.is_cell(cell2)
