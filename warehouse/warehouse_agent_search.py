@@ -68,10 +68,7 @@ class WarehouseAgentSearch(Agent):
 
             problem = WarehouseProblemSearch(state, pair.cell2)
             solution = self.solve_problem(problem)
-            try:
-                pair.actions = solution.actions
-            except:
-                exit(1)
+            pair.actions = solution.actions
             pair.invert_actions()
             pair.value = solution.cost
 
