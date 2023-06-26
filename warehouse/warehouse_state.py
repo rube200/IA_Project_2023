@@ -24,11 +24,11 @@ class WarehouseState(State[Action]):
 
         for i in range(self.rows):
             for j in range(self.columns):
-                self.matrix[i][j] = matrix[i][j]
-                if self.matrix[i][j] == constants.FORKLIFT:
+                cell_info = matrix[i][j]
+                if cell_info == constants.FORKLIFT:
                     self.line_forklift = i
                     self.column_forklift = j
-                elif self.matrix[i][j] == constants.EXIT:
+                elif cell_info == constants.EXIT:
                     self.line_exit = i
                     self.column_exit = j
 
