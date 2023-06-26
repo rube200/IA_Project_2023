@@ -11,7 +11,7 @@ class ExperimentsFactory(ABC):
 
     def __init__(self, filename: str):
         self.num_runs = None
-        self.collisions = False
+        self.allow_collisions = True
         self.parameters = None
         self.ordered_parameters_array = None
         self.statistics_names = []

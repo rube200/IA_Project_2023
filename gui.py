@@ -149,10 +149,10 @@ class Window(tk.Tk):
         self.entry_mutation_prob.insert(tk.END, '0.1')
         self.entry_mutation_prob.grid(row=8, column=1)
 
-        self.collisions_run = tk.BooleanVar(value=False)
-        self.collisions_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Collisions',
-                                                  variable=self.collisions_run)
-        self.collisions_checkbox.grid(row=9, column=1)
+        self.allow_collisions_run = tk.BooleanVar(value=True)
+        self.allow_collisions_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Allow Collisions',
+                                                  variable=self.allow_collisions_run)
+        self.allow_collisions_checkbox.grid(row=9, column=1)
 
         # 1.1.2 Run Panel
 
@@ -343,7 +343,7 @@ class Window(tk.Tk):
         self.average_values = []
         self.best_values = []
 
-        self.problem_ga.agent_search.initial_environment.allow_collisions = not self.collisions_run.get()
+        self.problem_ga.agent_search.initial_environment.allow_collisions = self.allow_collisions_run.get()
         self.genetic_algorithm.problem = self.problem_ga
         self.genetic_algorithm.add_tkinter_listener(self)
         self.genetic_algorithm.daemon = True

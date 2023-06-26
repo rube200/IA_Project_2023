@@ -31,8 +31,8 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
     def build_experiment(self) -> Experiment:
         self.num_runs = int(self.get_parameter_value('Runs'))
 
-        if self.contains_parameter('Collisions'):
-            self.collisions = bool(self.get_parameter_value('Collisions'))
+        if self.contains_parameter('Allow_Collisions'):
+            self.allow_collisions = bool(self.get_parameter_value('Allow_Collisions'))
 
         self.population_size = int(self.get_parameter_value('Population_size'))
         self.max_generations = int(self.get_parameter_value('Max_generations'))
@@ -67,7 +67,7 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         matrix, num_rows, num_columns = read_state_from_txt_file(self.get_parameter_value("Problem_file"))
 
         agent_search = WarehouseAgentSearch(
-            WarehouseState(matrix, num_rows, num_columns, allow_collisions=not self.collisions))
+            WarehouseState(matrix, num_rows, num_columns, allow_collisions=self.allow_collisions))
         agent_search.calculate_pairs_distances()
 
         self.problem = WarehouseProblemGA(agent_search)
