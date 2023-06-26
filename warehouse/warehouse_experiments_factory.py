@@ -66,7 +66,8 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         # PROBLEM
         matrix, num_rows, num_columns = read_state_from_txt_file(self.get_parameter_value("Problem_file"))
 
-        agent_search = WarehouseAgentSearch(WarehouseState(matrix, num_rows, num_columns, allow_collisions=not self.collisions))
+        agent_search = WarehouseAgentSearch(
+            WarehouseState(matrix, num_rows, num_columns, allow_collisions=not self.collisions))
         agent_search.calculate_pairs_distances()
 
         self.problem = WarehouseProblemGA(agent_search)
@@ -76,12 +77,12 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         experiment_configuration_values = self.build_experiment_values()
 
         self.experiment = Experiment(
-                self,
-                self.num_runs,
-                self.problem,
-                experiment_textual_representation,
-                experiment_header,
-                experiment_configuration_values)
+            self,
+            self.num_runs,
+            self.problem,
+            experiment_textual_representation,
+            experiment_header,
+            experiment_configuration_values)
 
         self.statistics.clear()
         for statistic_name in self.statistics_names:
@@ -93,12 +94,12 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
 
     def generate_ga_instance(self, seed: int) -> GeneticAlgorithm:
         ga = GeneticAlgorithm(
-                seed,
-                self.population_size,
-                self.max_generations,
-                self.selection_method,
-                self.recombination_method,
-                self.mutation_method
+            seed,
+            self.population_size,
+            self.max_generations,
+            self.selection_method,
+            self.recombination_method,
+            self.mutation_method
         )
 
         for statistic in self.statistics:

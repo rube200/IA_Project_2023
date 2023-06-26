@@ -1,12 +1,11 @@
-
 from abc import abstractmethod
 
 from agentsearch.problem import Problem
 from agentsearch.state import State
 from search_methods.graph_search import GraphSearch
-from utils.node_priority_queue import NodePriorityQueue
-from search_methods.solution import Solution
 from search_methods.node import Node
+from search_methods.solution import Solution
+from utils.node_priority_queue import NodePriorityQueue
 
 
 class InformedSearch(GraphSearch[NodePriorityQueue]):

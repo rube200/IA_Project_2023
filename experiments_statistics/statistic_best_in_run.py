@@ -1,10 +1,10 @@
-
-import os
 import copy
-from ga.ga_listener import GAListener
-from ga.ga_event import GAEvent
-from experiments.experiment_listener import ExperimentListener
+import os
+
 from experiments.experiment_event import ExperimentEvent
+from experiments.experiment_listener import ExperimentListener
+from ga.ga_event import GAEvent
+from ga.ga_listener import GAListener
 
 
 class StatisticBestInRun(GAListener, ExperimentListener):

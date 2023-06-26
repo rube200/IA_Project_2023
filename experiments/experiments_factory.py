@@ -1,4 +1,3 @@
-
 from abc import ABC, abstractmethod
 
 import numpy as np
@@ -39,8 +38,8 @@ class ExperimentsFactory(ABC):
 
     def indices_managing(self, index: int) -> None:
         self.ordered_parameters_array[index].active_value_index += 1
-        if index != 0 and \
-           self.ordered_parameters_array[index].active_value_index >= len(self.ordered_parameters_array[index].values):
+        if index != 0 and self.ordered_parameters_array[index].active_value_index >= len(
+                self.ordered_parameters_array[index].values):
             self.ordered_parameters_array[index].active_value_index = 0
             index -= 1
             self.indices_managing(index)

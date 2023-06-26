@@ -1,5 +1,5 @@
-
 from abc import ABC, abstractmethod
+
 from ga.population import Population
 
 

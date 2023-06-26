@@ -1,6 +1,5 @@
-
-from ga.problem import Problem
 from experiments.experiment_event import ExperimentEvent
+from ga.problem import Problem
 
 
 class Experiment:

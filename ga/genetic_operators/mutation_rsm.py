@@ -1,6 +1,6 @@
 from ga.genetic_algorithm import GeneticAlgorithm
-from ga.individual_int_vector import IntVectorIndividual
 from ga.genetic_operators.mutation import Mutation
+from ga.individual_int_vector import IntVectorIndividual
 
 
 class MutationRSM(Mutation):
