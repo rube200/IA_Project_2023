@@ -1,4 +1,3 @@
-
 from search_methods.node import Node
 from utils.node_collection import NodeCollection
 

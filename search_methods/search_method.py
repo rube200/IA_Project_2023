@@ -1,4 +1,3 @@
-
 from abc import ABC, abstractmethod
 
 from agentsearch.problem import Problem

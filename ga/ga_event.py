@@ -1,4 +1,3 @@
-
 from ga.individual import Individual
 
 

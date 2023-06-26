@@ -1,5 +1,4 @@
 import copy
-import time
 from random import Random
 
 from ga.ga_event import GAEvent

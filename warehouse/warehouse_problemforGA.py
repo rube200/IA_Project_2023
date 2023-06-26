@@ -18,4 +18,3 @@ class WarehouseProblemGA(Problem):
         string = "# of products: "
         string += f'{len(self.products)}'
         return string
-

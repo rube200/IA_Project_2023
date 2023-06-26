@@ -1,5 +1,3 @@
-
-
 class Parameter:
 
     def __init__(self, name: str, values: list):

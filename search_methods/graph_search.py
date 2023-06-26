@@ -1,13 +1,12 @@
-
 from abc import abstractmethod
 from typing import Generic, TypeVar, Type
 
 from agentsearch.problem import Problem
 from agentsearch.state import State
-from utils.node_collection import NodeCollection
+from search_methods.node import Node
 from search_methods.search_method import SearchMethod
 from search_methods.solution import Solution
-from search_methods.node import Node
+from utils.node_collection import NodeCollection
 
 T = TypeVar("T", bound=NodeCollection)
 

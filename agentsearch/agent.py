@@ -1,6 +1,5 @@
-
-from agentsearch.problem import Problem
 from agentsearch.heuristic import Heuristic
+from agentsearch.problem import Problem
 from search_methods.astar_search import AStarSearch
 from search_methods.solution import Solution
 

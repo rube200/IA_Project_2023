@@ -1,9 +1,9 @@
-
 import heapq
 
-from utils.node_collection import NodeCollection
-from search_methods.node import Node
 from agentsearch.state import State
+from search_methods.node import Node
+from utils.node_collection import NodeCollection
+
 
 #  In this class, self.list works as a heap (see https://en.wikipedia.org/wiki/Heap_(data_structure))
 

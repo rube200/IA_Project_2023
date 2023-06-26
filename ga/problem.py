@@ -1,5 +1,5 @@
-
 from abc import ABC, abstractmethod
+
 from ga.individual import Individual
 
 

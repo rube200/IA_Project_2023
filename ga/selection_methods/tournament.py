@@ -1,9 +1,9 @@
-
 import copy
+
 from ga.genetic_algorithm import GeneticAlgorithm
+from ga.individual import Individual
 from ga.population import Population
 from ga.selection_methods.selection_method import SelectionMethod
-from ga.individual import Individual
 
 
 class Tournament(SelectionMethod):
@@ -27,5 +27,3 @@ class Tournament(SelectionMethod):
 
     def __str__(self):
         return "Tournament (" + f'{self.tournament_size}' + ")"
-
-

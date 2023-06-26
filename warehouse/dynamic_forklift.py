@@ -46,7 +46,7 @@ class DynamicForklift:
         return self.current_target_index < len(self.targets_info)
 
     def have_more_targets(self) -> bool:
-        return self.current_target_index + 1< len(self.targets_info)
+        return self.current_target_index + 1 < len(self.targets_info)
 
     def next_action(self):
         self.current_action_index += 1

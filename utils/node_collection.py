@@ -1,8 +1,7 @@
-
 from abc import ABC, abstractmethod
 
-from search_methods.node import Node
 from agentsearch.state import State
+from search_methods.node import Node
 
 
 class NodeCollection(ABC):

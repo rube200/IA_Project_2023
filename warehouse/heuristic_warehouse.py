@@ -9,8 +9,8 @@ class HeuristicWarehouse(Heuristic[WarehouseProblemSearch, WarehouseState]):
         super().__init__()
 
     def compute(self, state: WarehouseState) -> float:
-        return abs(state.line_forklift - self.problem.goal_position.line) + abs(state.column_forklift - self.problem.goal_position.column)
+        return abs(state.line_forklift - self.problem.goal_position.line) + abs(
+            state.column_forklift - self.problem.goal_position.column)
 
     def __str__(self):
         return "Distance to goal position"
-
