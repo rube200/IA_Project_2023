@@ -1,3 +1,5 @@
+from copy import copy
+
 from agentsearch.problem import Problem
 from warehouse.actions import *
 from warehouse.cell import Cell

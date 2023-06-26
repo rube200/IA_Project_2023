@@ -91,11 +91,11 @@ class WarehouseIndividual(IntVectorIndividual):
                 continue
 
             append_target(forklift_data, self.agent.exit)
-            forklift_data.current_position = forklifts[forklift_index].copy()
+            forklift_data.current_position = copy(forklifts[forklift_index])
             forklift_index = gene - products_size + 1
 
         append_target(forklifts_data[forklift_index], self.agent.exit)
-        forklifts_data[forklift_index].current_position = forklifts[forklift_index].copy()
+        forklifts_data[forklift_index].current_position = copy(forklifts[forklift_index])
 
         # Simulation
 
@@ -126,7 +126,7 @@ class WarehouseIndividual(IntVectorIndividual):
             state.column_forklift = forklift_data.current_position.column
 
             if not action.is_valid(state):
-                state_copy = state.soft_copy()
+                state_copy = copy(state)
                 new_path = self.search_alternative_path(forklift_data, state_copy)
                 if new_path:
                     action = self.get_next_simulation_action(forklift_data)
@@ -185,7 +185,7 @@ class WarehouseIndividual(IntVectorIndividual):
         forklifts_path = [[forklift] for forklift in forklifts]
         max_steps = 0
 
-        state = self.agent.initial_environment.soft_copy()
+        state = copy(self.agent.initial_environment)
         state.allow_collisions = True
 
         for i in range(len(self.forklifts_actions)):

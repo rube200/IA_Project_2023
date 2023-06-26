@@ -151,7 +151,7 @@ class Window(tk.Tk):
 
         self.allow_collisions_run = tk.BooleanVar(value=True)
         self.allow_collisions_checkbox = tk.Checkbutton(master=self.panel_parameters, text='Allow Collisions',
-                                                  variable=self.allow_collisions_run)
+                                                        variable=self.allow_collisions_run)
         self.allow_collisions_checkbox.grid(row=9, column=1)
 
         # 1.1.2 Run Panel
