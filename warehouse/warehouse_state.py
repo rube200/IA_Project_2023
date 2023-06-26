@@ -106,6 +106,7 @@ class WarehouseState(State[Action]):
         new_state.column_forklift = self.column_forklift
         new_state.line_exit = self.line_exit
         new_state.column_exit = self.column_exit
+        new_state.is_default = self.is_default
         return new_state
 
     def __str__(self):
