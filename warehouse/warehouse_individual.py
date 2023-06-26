@@ -1,3 +1,5 @@
+from copy import copy
+
 from agentsearch.action import Action
 from ga.genetic_algorithm import GeneticAlgorithm
 from ga.individual_int_vector import IntVectorIndividual
@@ -99,7 +101,7 @@ class WarehouseIndividual(IntVectorIndividual):
 
         fitness = 0
         forklift_index = 0
-        state = self.agent.initial_environment.soft_copy()
+        state = copy(self.agent.initial_environment)
 
         while any(not forklift_data.in_exit for forklift_data in forklifts_data):
             forklift_data = forklifts_data[forklift_index]
@@ -223,8 +225,7 @@ class WarehouseIndividual(IntVectorIndividual):
     def better_than(self, other: "WarehouseIndividual") -> bool:
         return True if self.fitness < other.fitness else False
 
-    # __deepcopy__ is implemented here so that all individuals share the same problem instance
-    def __deepcopy__(self, memo):
+    def __copy__(self):
         new_instance = self.__class__(self.problem, self.num_genes, False)
         new_instance.genome = self.genome.copy()
         new_instance.fitness = self.fitness

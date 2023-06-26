@@ -1,7 +1,7 @@
-import copy
 import queue
 import threading
 import tkinter as tk
+from copy import copy
 from tkinter import filedialog as fd
 from tkinter import messagebox
 from tkinter import ttk
@@ -274,7 +274,7 @@ class Window(tk.Tk):
         if filename:
             matrix, num_rows, num_columns = read_state_from_txt_file(filename)
             self.initial_state = WarehouseState(matrix, num_rows, num_columns)
-            self.agent_search = WarehouseAgentSearch(self.initial_state.soft_copy())
+            self.agent_search = WarehouseAgentSearch(copy(self.initial_state))
             self.solution = None
             self.text_problem.delete("1.0", "end")
             self.text_problem.insert(tk.END, str(self.initial_state) + "\n" + str(self.agent_search))
@@ -361,7 +361,7 @@ class Window(tk.Tk):
                             simulation=tk.DISABLED, stop_simulation=tk.NORMAL)
         self.queue.queue.clear()
         best_in_run = self.genetic_algorithm.best_in_run
-        self.solution_runner = SolutionRunner(self, best_in_run, copy.deepcopy(self.initial_state))
+        self.solution_runner = SolutionRunner(self, best_in_run, copy(self.initial_state))
         self.solution_runner.daemon = True
         self.solution_runner.start()
         self.active_threads.append(self.solution_runner)
@@ -694,5 +694,5 @@ class SolutionRunner(threading.Thread):
                 else:
                     self.state.matrix[old_cell[j].line][old_cell[j].column] = constants.FORKLIFT
 
-            self.gui.queue.put((copy.deepcopy(self.state), step - 1, False))
+            self.gui.queue.put((copy(self.state), step - 1, False))
         self.gui.queue.put((None, steps, True))  # Done

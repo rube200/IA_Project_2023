@@ -1,5 +1,5 @@
-import copy
 import os
+from copy import copy
 
 from experiments.experiment_event import ExperimentEvent
 from experiments.experiment_listener import ExperimentListener
@@ -20,7 +20,7 @@ class StatisticBestInRun(GAListener, ExperimentListener):
 
     def run_ended(self, ga_event: GAEvent) -> None:
         if not self.experiment_best or ga_event.best.better_than(self.experiment_best):
-            self.experiment_best = copy.deepcopy(ga_event.best)
+            self.experiment_best = copy(ga_event.best)
 
     def experiment_ended(self, experiment_event: ExperimentEvent) -> None:
         experiment_textual_representation = experiment_event.experiment.experiment_textual_representation

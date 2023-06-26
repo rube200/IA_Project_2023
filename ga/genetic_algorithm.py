@@ -1,4 +1,4 @@
-import copy
+from copy import copy
 from random import Random
 
 from ga.ga_event import GAEvent
@@ -48,7 +48,7 @@ class GeneticAlgorithm:
             self.mutation_method.run(self.population)
             self.population.evaluate()
             if self.population.best_individual.better_than(self.best_in_run):
-                self.best_in_run = copy.deepcopy(self.population.best_individual)
+                self.best_in_run = copy(self.population.best_individual)
             self.generation += 1
             self.fire_generation_ended()
         self.fire_run_ended()
@@ -63,8 +63,8 @@ class GeneticAlgorithm:
 
     def fire_generation_ended(self) -> None:
         for listener in self.listeners:
-            listener.generation_ended(GAEvent(copy.deepcopy(self.best_in_run), self.population.average_fitness))
+            listener.generation_ended(GAEvent(copy(self.best_in_run), self.population.average_fitness))
 
     def fire_run_ended(self) -> None:
         for listener in self.listeners:
-            listener.run_ended(GAEvent(copy.deepcopy(self.best_in_run), self.population.average_fitness, True))
+            listener.run_ended(GAEvent(copy(self.best_in_run), self.population.average_fitness, True))

@@ -1,3 +1,4 @@
+from copy import copy
 from typing import TypeVar
 
 import numpy as np
@@ -52,7 +53,7 @@ class WarehouseAgentSearch(Agent):
         return string
 
     def calculate_pairs_distances(self):
-        state = self.initial_environment.soft_copy()
+        state = copy(self.initial_environment)
         state.allow_collisions = True
         for pair in self.pairs:
             pair_line = pair.cell1.line

@@ -100,7 +100,7 @@ class WarehouseState(State[Action]):
         }
         return switcher.get(self.matrix[row][column], constants.COLOREMPTY)
 
-    def soft_copy(self) -> "WarehouseState":
+    def __copy__(self) -> "WarehouseState":
         new_state = self.__class__(self.matrix, self.rows, self.columns, False, self.allow_collisions)
         new_state.line_forklift = self.line_forklift
         new_state.column_forklift = self.column_forklift

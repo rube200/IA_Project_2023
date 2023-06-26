@@ -1,10 +1,12 @@
+from copy import copy
+
 from agentsearch.action import Action
 from warehouse.cell import Cell
 
 
 class DynamicForklift:
     def __init__(self, initial_cell: Cell):
-        self.current_position = initial_cell.copy()
+        self.current_position = copy(initial_cell)
         self.in_exit = False
         self.move_tries = 0
         self.targets_info = []

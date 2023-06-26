@@ -1,5 +1,5 @@
-import copy
 import threading
+from copy import copy
 
 from ga.ga_event import GAEvent
 from ga.genetic_algorithm import GeneticAlgorithm
@@ -42,9 +42,9 @@ class GeneticAlgorithmThread(GeneticAlgorithm, threading.Thread):
     def fire_generation_ended(self) -> None:
         super().fire_generation_ended()
         for listener in self.tkinter_listeners:
-            listener.queue.put(GAEvent(copy.deepcopy(self.best_in_run), self.population.average_fitness))
+            listener.queue.put(GAEvent(copy(self.best_in_run), self.population.average_fitness))
 
     def fire_run_ended(self) -> None:
         super().fire_run_ended()
         for listener in self.tkinter_listeners:
-            listener.queue.put(GAEvent(copy.deepcopy(self.best_in_run), self.population.average_fitness, True))
+            listener.queue.put(GAEvent(copy(self.best_in_run), self.population.average_fitness, True))
