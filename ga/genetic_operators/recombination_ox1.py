@@ -55,4 +55,4 @@ class RecombinationOX1(Recombination):
         return child1_genome, child2_genome
 
     def __str__(self):
-        return "OX1 Recombination (" + f'{self.probability}' + ")"
+        return "OX1 (" + f'{self.probability}' + ")"

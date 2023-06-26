@@ -26,6 +26,6 @@ class Tournament(SelectionMethod):
         return copy.deepcopy(best)
 
     def __str__(self):
-        return "Tournament selection(" + f'{self.tournament_size}' + ")"
+        return "Tournament (" + f'{self.tournament_size}' + ")"
 
 

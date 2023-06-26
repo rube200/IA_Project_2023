@@ -48,4 +48,4 @@ class RecombinationPMX(Recombination):
         ind2.genome = child1
 
     def __str__(self):
-        return "PMX recombination (" + f'{self.probability}' + ")"
+        return "PMX (" + f'{self.probability}' + ")"

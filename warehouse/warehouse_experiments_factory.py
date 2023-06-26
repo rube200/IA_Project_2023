@@ -117,7 +117,7 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         string += 'Max generations: ' + str(self.max_generations) + '\r\n'
         string += 'Selection: ' + str(self.selection_method) + '\r\n'
         string += 'Recombination: ' + str(self.recombination_method) + '\r\n'
-        string += 'Mutation:' + str(self.mutation_method) + '\r\n'
+        string += 'Mutation: ' + str(self.mutation_method) + '\r\n'
         return string
 
     def build_experiment_header(self) -> str:
@@ -125,7 +125,7 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         string += 'Max generations: ' + '\t'
         string += 'Selection: ' + '\t'
         string += 'Recombination: ' + '\t'
-        string += 'Mutation:' + '\t'
+        string += 'Mutation: ' + '\t'
         return string
 
     def build_experiment_values(self) -> str:

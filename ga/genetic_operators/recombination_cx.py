@@ -41,4 +41,4 @@ class RecombinationCX(Recombination):
         return child1_genome, child2_genome
 
     def __str__(self):
-        return "CX Recombination (" + f'{self.probability}' + ")"
+        return "CX (" + f'{self.probability}' + ")"
