@@ -28,15 +28,17 @@ class RecombinationCX(Recombination):
             other_ind = ind1
 
         target_index = 0
-        while target_index < genome_size:
-            if child1_genome[target_index] != -1:
-                target_index += 1
-                continue
-
+        while child1_genome[target_index] == -1:
             child1_genome[target_index] = main_ind.genome[target_index]
             child2_genome[target_index] = value = other_ind.genome[target_index]
-
             target_index = main_ind.genome.index(value)
+
+        for i in range(genome_size):
+            if child1_genome[i] != -1:
+                continue
+
+            child1_genome[i] = other_ind.genome[i]
+            child2_genome[i] = main_ind.genome[i]
 
         return child1_genome, child2_genome
 
