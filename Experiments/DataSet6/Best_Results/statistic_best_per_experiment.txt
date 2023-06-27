@@ -1,0 +1,51 @@
+
+Population size: 100
+Max generations: 50
+Selection: Tournament (4)
+Recombination: OX1 (0.7)
+Mutation: RSM (0.5)
+Allow Collisions: True
+Fitness: 87
+A->3
+D->7,10,12,15,11,9,8,5
+C->2
+E->16,13,17,14,6,4,1
+B->
+
+
+
+# --------------------------------------------------------------
+
+Population size: 100
+Max generations: 100
+Selection: Tournament (4)
+Recombination: OX1 (0.7)
+Mutation: RSM (0.5)
+Allow Collisions: True
+Fitness: 85
+A->
+E->16,13,5
+C->10,7,2
+D->12,8,9,11,15,17,14,6,4,3
+B->1
+
+
+
+# --------------------------------------------------------------
+
+Population size: 100
+Max generations: 150
+Selection: Tournament (4)
+Recombination: OX1 (0.7)
+Mutation: RSM (0.5)
+Allow Collisions: True
+Fitness: 85
+A->
+E->16,13,5
+C->10,7,2
+D->12,8,9,11,15,17,14,6,4,3
+B->1
+
+
+
+# --------------------------------------------------------------
