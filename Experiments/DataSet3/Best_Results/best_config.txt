@@ -1,0 +1,37 @@
+Runs: 30
+
+Population_size: 200
+
+Max_generations: 50
+
+# --------------------------------
+
+Selection: tournament
+
+Tournament_size: 4
+
+# --------------------------------
+
+Recombination: ox1
+
+Recombination_probability: 0.9
+
+# --------------------------------
+
+Mutation: rsm
+
+Mutation_probability: 0.25
+
+# --------------------------------
+
+Problem_file: ./problem3.txt
+
+# --------------------------------
+
+Statistic: BestIndividual
+Statistic: BestAverage
+
+# --------------------------------
+# We can increase max generation for better fitness average
+# but to just find the best fitness we just need 50 generations
+# --------------------------------

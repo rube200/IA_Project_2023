@@ -1,0 +1,4 @@
+Population size:	Max generations: 	Selection: 	Recombination: 	Mutation: 		Average:	StdDev:
+200	50	Tournament (4)	OX1 (0.9)	RSM (0.25)		129.26666666666668	7.6678259993009465
+200	100	Tournament (4)	OX1 (0.9)	RSM (0.25)		128.6	6.755738301621814
+200	150	Tournament (4)	OX1 (0.9)	RSM (0.25)		127.6	6.0088823142633325

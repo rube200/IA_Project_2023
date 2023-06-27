@@ -1,0 +1,1459 @@
+Population size:	Max generations: 	Selection: 	Recombination: 	Mutation:		Fitness:
+50	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+50	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+50	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+50	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+50	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+50	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+50	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+50	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+50	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+50	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+50	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+50	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+50	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+50	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+50	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+50	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+50	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+50	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+50	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+100	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+100	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+100	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+100	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+100	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+100	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+100	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+100	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+100	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+100	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+100	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+100	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+100	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+100	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+100	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+100	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+100	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+100	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+200	50	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+200	50	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+200	50	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+200	50	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+200	50	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+200	50	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+200	100	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+200	100	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+200	100	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+200	100	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+200	100	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+200	100	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	RSM (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,7)	PSM (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	RSM (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,8)	PSM (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	RSM (0,5)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,1)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,25)		14
+200	150	Tournament selection(2)	PMX recombination (0,9)	PSM (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	RSM (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,7)	PSM (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	RSM (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,8)	PSM (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	RSM (0,5)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,1)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,25)		14
+200	150	Tournament selection(2)	OX1 Recombination (0,9)	PSM (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	RSM (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,7)	PSM (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	RSM (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,8)	PSM (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	RSM (0,5)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,1)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,25)		14
+200	150	Tournament selection(2)	CX Recombination (0,9)	PSM (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	RSM (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,7)	PSM (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	RSM (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,8)	PSM (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	RSM (0,5)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,1)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,25)		14
+200	150	Tournament selection(4)	PMX recombination (0,9)	PSM (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	RSM (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,7)	PSM (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	RSM (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,8)	PSM (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	RSM (0,5)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,1)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,25)		14
+200	150	Tournament selection(4)	OX1 Recombination (0,9)	PSM (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	RSM (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,7)	PSM (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	RSM (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,8)	PSM (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	Insert Mutation (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	RSM (0,5)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,1)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,25)		14
+200	150	Tournament selection(4)	CX Recombination (0,9)	PSM (0,5)		14
