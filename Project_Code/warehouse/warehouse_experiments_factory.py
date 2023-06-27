@@ -32,7 +32,9 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         self.num_runs = int(self.get_parameter_value('Runs'))
 
         if self.contains_parameter('Allow_Collisions'):
-            self.allow_collisions = bool(self.get_parameter_value('Allow_Collisions'))
+            allow_col = self.get_parameter_value('Allow_Collisions').lower()
+            if allow_col in ('n', 'no', 'f', 'false', 'off', '0'):
+                self.allow_collisions = False
 
         self.population_size = int(self.get_parameter_value('Population_size'))
         self.max_generations = int(self.get_parameter_value('Max_generations'))
