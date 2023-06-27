@@ -1,0 +1,4 @@
+Population size:	Max generations: 	Selection: 	Recombination: 	Mutation: 		Fitness:
+100	50	Tournament (4)	OX1 (0.9)	RSM (0.1)		229
+100	100	Tournament (4)	OX1 (0.9)	RSM (0.1)		189
+100	150	Tournament (4)	OX1 (0.9)	RSM (0.1)		185
