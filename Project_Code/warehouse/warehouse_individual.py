@@ -29,13 +29,13 @@ class WarehouseIndividual(IntVectorIndividual):
     def compute_fitness(self) -> float:
         self.forklifts_actions = [[] for _ in range(len(self.agent.forklifts))]
         if self.agent.initial_environment.allow_collisions:
-            self.fitness = self.compute_fitness_without_collision()
+            self.fitness = self.compute_fitness_collision()
             return self.fitness
 
-        self.fitness = self.compute_fitness_with_collision()
+        self.fitness = self.compute_fitness_with_collision_check()
         return self.fitness
 
-    def compute_fitness_without_collision(self) -> float:
+    def compute_fitness_collision(self) -> float:
         fitness = 0
 
         forklifts = self.agent.forklifts
@@ -65,7 +65,7 @@ class WarehouseIndividual(IntVectorIndividual):
         fitness += get_fitness(forklift_pos, self.agent.exit)
         return fitness
 
-    def compute_fitness_with_collision(self) -> float:
+    def compute_fitness_with_collision_check(self) -> float:
         forklifts = self.agent.forklifts
         forklifts_len = len(forklifts)
         forklift_index = 0

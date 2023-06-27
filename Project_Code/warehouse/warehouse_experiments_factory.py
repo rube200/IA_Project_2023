@@ -119,6 +119,7 @@ class WarehouseExperimentsFactory(ExperimentsFactory):
         string += 'Selection: ' + str(self.selection_method) + '\r\n'
         string += 'Recombination: ' + str(self.recombination_method) + '\r\n'
         string += 'Mutation: ' + str(self.mutation_method) + '\r\n'
+        string += 'Allow Collisions: ' + str(self.allow_collisions) + '\r\n'
         return string
 
     def build_experiment_header(self) -> str:
