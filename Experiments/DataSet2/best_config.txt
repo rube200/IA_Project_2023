@@ -1,6 +1,6 @@
 Runs: 30
 
-Population_size: 50
+Population_size: 200
 
 Max_generations: 50
 
@@ -14,13 +14,13 @@ Tournament_size: 2
 
 Recombination: ox1
 
-Recombination_probability: 0.5
+Recombination_probability: 0.9
 
 # --------------------------------
 
 Mutation: psm
 
-Mutation_probability: 0.8
+Mutation_probability: 0.5
 
 # --------------------------------
 
